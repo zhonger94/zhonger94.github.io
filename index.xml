@@ -2,50 +2,39 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Hugo tranquilpeak theme</title>
-    <link>https://zhonger94.github.io/</link>
+    <link>https://zhonger.xyz/</link>
     <description>Recent content on Hugo tranquilpeak theme</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 13 Mar 2021 14:12:47 +0800</lastBuildDate>
+    <lastBuildDate>Sat, 13 Mar 2021 14:12:12 +0800</lastBuildDate>
     
-	<atom:link href="https://zhonger94.github.io/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://zhonger.xyz/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>First</title>
-      <link>https://zhonger94.github.io/2021/03/first/</link>
-      <pubDate>Sat, 13 Mar 2021 14:12:47 +0800</pubDate>
-      
-      <guid>https://zhonger94.github.io/2021/03/first/</guid>
-      <description>hello 中二博客 1.www.zhonger.com
-1.中二博客
-1.打个招呼</description>
-    </item>
     
     <item>
       <title>About</title>
-      <link>https://zhonger94.github.io/about/</link>
+      <link>https://zhonger.xyz/about/</link>
       <pubDate>Sat, 13 Mar 2021 14:12:12 +0800</pubDate>
       
-      <guid>https://zhonger94.github.io/about/</guid>
+      <guid>https://zhonger.xyz/about/</guid>
       <description></description>
     </item>
     
     <item>
       <title>中文測試</title>
-      <link>https://zhonger94.github.io/2013/10/chinese-test/</link>
+      <link>https://zhonger.xyz/2013/10/chinese-test/</link>
       <pubDate>Wed, 02 Oct 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://zhonger94.github.io/2013/10/chinese-test/</guid>
+      <guid>https://zhonger.xyz/2013/10/chinese-test/</guid>
       <description>&lt;p&gt;This is a chinese test post to show you how chinese is displayed.&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>日本語テスト</title>
-      <link>https://zhonger94.github.io/2013/01/japanese-test/</link>
+      <link>https://zhonger.xyz/2013/01/japanese-test/</link>
       <pubDate>Wed, 02 Jan 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://zhonger94.github.io/2013/01/japanese-test/</guid>
+      <guid>https://zhonger.xyz/2013/01/japanese-test/</guid>
       <description>&lt;p&gt;This is a Japanese test post to show you how japanese is displayed.&lt;/p&gt;</description>
     </item>
     
