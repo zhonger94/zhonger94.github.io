@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>zhonger-blog</title>
+    <title>Hugo tranquilpeak theme</title>
     <link>https://zhonger.xyz/</link>
-    <description>Recent content on zhonger-blog</description>
+    <description>Recent content on Hugo tranquilpeak theme</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 13 Mar 2021 14:12:12 +0800</lastBuildDate>
