@@ -385,9 +385,7 @@
 
 <p>​               通过以上指令把本地的hugo上传到github仓库</p>
 
-<h2 id="第五步-打开浏览器-输入-https-zhonger94-github-io-即可访问自己的博客-无需在cmd窗口输入">第五步:  打开浏览器，输入 <a href="https://zhonger94.github.io/">https://zhonger94.github.io/</a>   ，即可访问自己的博客,无需在cmd窗口输入</h2>
-
-<p>​               hugo server 指令</p>
+<h2 id="第五步-打开浏览器-输入-https-zhonger94-github-io-即可访问自己的博客-无需在cmd窗口输入指令-hugo-server">第五步:  打开浏览器，输入 <a href="https://zhonger94.github.io/">https://zhonger94.github.io/</a>   ，即可访问自己的博客,无需在cmd窗口输入指令  hugo server</h2>
 
 <h3 id="aliyun"># Aliyun:</h3>
 
@@ -422,6 +420,158 @@
 <p>注意：每次更新博客后，都需要重新打包public 并上传到github 。</p>
 
 <h3 id="附上配置文件-config-toml-的相关注解">附上配置文件 config.toml 的相关注解：</h3>
+
+<p>baseURL = &ldquo;<a href="https://your_name.github.io/your_name/&quot;">https://your_name.github.io/your_name/&quot;</a></p>
+
+<h2 id="tips-必须配置-否则上传的博客在github-pages无法找到css文件-不产生样式">Tips: 必须配置，否则上传的博客在GitHub Pages无法找到css文件，不产生样式</h2>
+
+<p>languageCode = &ldquo;en-us&rdquo;</p>
+
+<p>defaultContentLanguage = &ldquo;zh-cn&rdquo;</p>
+
+<h2 id="tips-配置中文">Tips: 配置中文</h2>
+
+<p>title = &ldquo;zhonger-blog&rdquo;</p>
+
+<h2 id="tips-博客名称">Tips: 博客名称</h2>
+
+<p>theme = &ldquo;tranquilpeak&rdquo;</p>
+
+<h2 id="tips-配置主题">Tips: 配置主题</h2>
+
+<p>disqusShortname = &ldquo;valine&rdquo;</p>
+
+<h2 id="tips-评论系统">Tips: 评论系统</h2>
+
+<p>paginate = 10</p>
+
+<h2 id="tips-每个页面显示的文章数">Tips: 每个页面显示的文章数</h2>
+
+<p>[permalinks]</p>
+
+<p>post = &ldquo;/:year/:month/:slug/&rdquo;</p>
+
+<p>[taxonomies]</p>
+
+<p>tag = &ldquo;tags&rdquo;</p>
+
+<p>category = &ldquo;categories&rdquo;</p>
+
+<p>archive = &ldquo;archives&rdquo;</p>
+
+<h2 id="tips-定义的博客分类与逻辑关系">Tips: 定义的博客分类与逻辑关系</h2>
+
+<p>[author]</p>
+
+<p>name = &ldquo;your_name&rdquo;</p>
+
+<h2 id="tips-博客侧边栏名字">Tips: 博客侧边栏名字</h2>
+
+<p>bio = &ldquo;后端开发&rdquo;</p>
+
+<h2 id="tips-博客侧边栏个人简介">Tips: 博客侧边栏个人简介</h2>
+
+<p>job = &ldquo;After-end&rdquo;</p>
+
+<h2 id="tips-博客侧边栏职业">Tips: 博客侧边栏职业</h2>
+
+<p>location = &ldquo;China&rdquo;</p>
+
+<h2 id="tips-博客个人资料页面地址">Tips: 博客个人资料页面地址</h2>
+
+<p>gravatarEmail = &ldquo;932578590@qq.com&rdquo;</p>
+
+<h2 id="tips-博客个人头像-取自wordpress头像">Tips: 博客个人头像，取自WordPress头像</h2>
+
+<p>[[menu.main]]</p>
+
+<p>weight = 1</p>
+
+<p>identifier = &ldquo;首页&rdquo;</p>
+
+<p>name = &ldquo;首页&rdquo;</p>
+
+<p>pre = &ldquo;<i class=\"sidebar-button-icon fa fa-lg fa-home\"></i>&ldquo;</p>
+
+<p>url = &ldquo;/&rdquo;</p>
+
+<p>&hellip;</p>
+
+<p>[[menu.links]]</p>
+
+<p>&hellip;</p>
+
+<p>[[menu.misc]]</p>
+
+<h2 id="tips-定义的侧边栏菜单-icon取自font-awesome">Tips: 定义的侧边栏菜单，icon取自Font-awesome</h2>
+
+<p>[params]</p>
+
+<p>dateFormat = &ldquo;2006年1月2日&rdquo;</p>
+
+<h2 id="tips-默认日期格式">Tips: 默认日期格式</h2>
+
+<p>syntaxHighlighter = &ldquo;highlight.js&rdquo;</p>
+
+<h2 id="tips-语法高亮js库">Tips: 语法高亮js库</h2>
+
+<p>clearReading = true</p>
+
+<h2 id="tips-进入文章内容页面侧边栏菜单收起状态">Tips: 进入文章内容页面侧边栏菜单收起状态</h2>
+
+<p>hierarchicalCategories = true</p>
+
+<p>sidebarBehavior = 2</p>
+
+<h2 id="tips-定义侧边栏状态-值为1-6-可自行测试显示状态">Tips: 定义侧边栏状态（值为1-6，可自行测试显示状态）</h2>
+
+<p>coverImage = &ldquo;cover.jpg&rdquo;</p>
+
+<p>imageGallery = true</p>
+
+<h2 id="tips-在有内容底部显示照片墙">Tips: 在有内容底部显示照片墙</h2>
+
+<p>thumbnailImage = true</p>
+
+<h2 id="tips-列表页是否显示内容图片">Tips: 列表页是否显示内容图片</h2>
+
+<p>thumbnailImagePosition = &ldquo;bottom&rdquo;</p>
+
+<h2 id="tips-列表页显示内容图片在底部">Tips: 列表页显示内容图片在底部</h2>
+
+<p>autoThumbnailImage = true</p>
+
+<p>favicon = &ldquo;/favicon.ico&rdquo;</p>
+
+<h2 id="tips-浏览器标签页本网站显示的图标-放置在static文件夹下">Tips: 浏览器标签页本网站显示的图标，放置在static文件夹下</h2>
+
+<p>[params.header.rightLink]</p>
+
+<p>class = &ldquo;&rdquo;</p>
+
+<p>icon = &ldquo;&rdquo;</p>
+
+<p>url = &ldquo;/#about&rdquo;</p>
+
+<h2 id="tips-是否显示页面头部右侧个人头像-及个人头像点击事件">Tips: 是否显示页面头部右侧个人头像，及个人头像点击事件</h2>
+
+<p>[params.valine]</p>
+
+<p>enable = true</p>
+
+<p>appId = &lsquo;your appid&rsquo;</p>
+
+<p>appKey = &lsquo;your appkey&rsquo;</p>
+
+<p>notify = false</p>
+
+<p>avatar = &lsquo;mm&rsquo;</p>
+
+<p>placeholder = &lsquo;说点什么吧&hellip;&rsquo;</p>
+
+<p>visitor = true</p>
+
+<h2 id="这里添加valine评论系统的相关参数">这里添加Valine评论系统的相关参数</h2>
 
 <p>以下为笔者参考的网站：</p>
 
