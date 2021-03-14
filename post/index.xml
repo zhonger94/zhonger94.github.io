@@ -12,15 +12,6 @@
     
     
     <item>
-      <title>Singleton</title>
-      <link>https://zhonger.xyz/2021/01/chinese-test/</link>
-      <pubDate>Sat, 02 Jan 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://zhonger.xyz/2021/01/chinese-test/</guid>
-      <description>&lt;p&gt;​   单例模式&lt;/p&gt;</description>
-    </item>
-    
-    <item>
       <title>win10本地博客搭建整理</title>
       <link>https://zhonger.xyz/2021/01/chinese-test/</link>
       <pubDate>Sat, 02 Jan 2021 00:00:00 +0000</pubDate>
@@ -45,6 +36,15 @@
       
       <guid>https://zhonger.xyz/2015/05/i-%E8%B7%9F-i/</guid>
       <description>&lt;p&gt;​    自增变量&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://zhonger.xyz/1/01/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://zhonger.xyz/1/01/</guid>
+      <description>&lt;p&gt;​   单例模式&lt;/p&gt;</description>
     </item>
     
   </channel>
