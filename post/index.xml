@@ -12,15 +12,6 @@
     
     
     <item>
-      <title>win10本地博客搭建整理</title>
-      <link>https://zhonger.xyz/2021/01/chinese-test/</link>
-      <pubDate>Sat, 02 Jan 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://zhonger.xyz/2021/01/chinese-test/</guid>
-      <description>&lt;p&gt;采用：hugo + github + aliyun&lt;/p&gt;</description>
-    </item>
-    
-    <item>
       <title>走台阶</title>
       <link>https://zhonger.xyz/2021/01/chinese-test/</link>
       <pubDate>Sat, 02 Jan 2021 00:00:00 +0000</pubDate>
@@ -45,6 +36,15 @@
       
       <guid>https://zhonger.xyz/2019/05/i-%E8%B7%9F-i/</guid>
       <description>&lt;p&gt;​    自增变量&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>win10本地博客搭建整理</title>
+      <link>https://zhonger.xyz/2019/01/win10%E6%9C%AC%E5%9C%B0%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%95%B4%E7%90%86/</link>
+      <pubDate>Wed, 02 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://zhonger.xyz/2019/01/win10%E6%9C%AC%E5%9C%B0%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E6%95%B4%E7%90%86/</guid>
+      <description>&lt;p&gt;采用：hugo + github + aliyun&lt;/p&gt;</description>
     </item>
     
   </channel>
