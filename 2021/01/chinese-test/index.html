@@ -8,18 +8,18 @@
 <meta name="generator" content="Hugo 0.55.6 with theme Tranquilpeak 0.4.8-BETA">
 <meta name="author" content="zhonger">
 <meta name="keywords" content="">
-<meta name="description" content="采用：hugo &#43; github &#43; aliyun">
+<meta name="description" content="​   斐波那契数列">
 
 
-<meta property="og:description" content="采用：hugo &#43; github &#43; aliyun">
+<meta property="og:description" content="​   斐波那契数列">
 <meta property="og:type" content="article">
-<meta property="og:title" content="win10本地博客搭建整理">
-<meta name="twitter:title" content="win10本地博客搭建整理">
+<meta property="og:title" content="走台阶">
+<meta name="twitter:title" content="走台阶">
 <meta property="og:url" content="https://zhonger.xyz/2021/01/chinese-test/">
 <meta property="twitter:url" content="https://zhonger.xyz/2021/01/chinese-test/">
 <meta property="og:site_name" content="zhonger-blog">
-<meta property="og:description" content="采用：hugo &#43; github &#43; aliyun">
-<meta name="twitter:description" content="采用：hugo &#43; github &#43; aliyun">
+<meta property="og:description" content="​   斐波那契数列">
+<meta name="twitter:description" content="​   斐波那契数列">
 <meta property="og:locale" content="zh-cn">
 
   
@@ -38,7 +38,7 @@
   
   
     
-      <meta property="article:tag" content="chinese">
+      <meta property="article:tag" content="java">
     
   
 
@@ -62,7 +62,7 @@
   <meta property="twitter:image" content="https://www.gravatar.com/avatar/a4bf5f5bec56803e6ed1c59e972e53a5?s=640">
 
 
-    <title>win10本地博客搭建整理</title>
+    <title>走台阶</title>
 
     <link rel="icon" href="https://zhonger.xyz/favicon.ico">
     
@@ -229,7 +229,7 @@
             <div class="post-header main-content-wrap text-left">
   
     <h1 class="post-title" itemprop="headline">
-      win10本地博客搭建整理
+      走台阶
     </h1>
   
   
@@ -263,321 +263,75 @@
           
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
-              <p>采用：hugo + github + aliyun</p>
-
-<p>​       ！！！前提条件：已安装 GIT，并熟悉git的相关操作</p>
-
-<h1 id="hugo">hugo:</h1>
-
-<h2 id="一-官网下载hugo-地址-https-github-com-gohugoio-hugo-releases">一：官网下载hugo，地址：<a href="https://github.com/gohugoio/hugo/releases">https://github.com/gohugoio/hugo/releases</a></h2>
-
-<p>​     我们根据自己的系统来选择版本即可，笔者是win10x64位。</p>
-
-<p>​     因为github的下载太慢，可以通过gitee下载。</p>
-
-<h4 id="第一步">第一步：</h4>
-
-<p><img src="https://zhonger.xyz/hugoZhengHe/hugo_1.png" alt="hugo_1.png" /></p>
-
-<h4 id="第二步">第二步：</h4>
-
-<p><img src="https://zhonger.xyz/hugoZhengHe/hugo_2.png" alt="hugo_2.png" /></p>
-
-<h4 id="第三步-复制到gitee后直接下载即可">第三步(复制到gitee后直接下载即可)：</h4>
-
-<p><img src="https://zhonger.xyz/hugoZhengHe/hugo_3.png" alt="" /></p>
-
-<h2 id="二-在本地磁盘建文件夹">二：在本地磁盘建文件夹</h2>
-
-<p>​        ①：在D盘新建一个文件夹：D:\Hugo    ps：不一定要在D盘新建，D、E、F盘都行</p>
-
-<p>​         ②：在Hugo目录下面再分别创建两个子文件夹：D:\Hugo\bin 、D:\Hugo\Sites</p>
-
-<h2 id="三-解压hugo安装包">三：解压hugo安装包</h2>
-
-<p>​       ①：解压之后得到三个文件hugo.exe、LICENSE、README.md；</p>
-
-<p><img src="https://zhonger.xyz/hugoZhengHe/hugo_4.png" alt="" /></p>
-
-<p>​       ②：把hugo.exe放进 D:\Hugo\bin文件夹；</p>
-
-<h2 id="四-配置环境变量">四：配置环境变量</h2>
-
-<p>​      对着 ”我的电脑“ 右键属性，在高级里面，选择环境变量，在系统变量里面找到path，点击“编辑”，</p>
-
-<p>​      在新弹出的窗口里，点击“新增”，把  D:\Hugo\bin 复制，然后保存退出。</p>
-
-<p>​         ps：笔者这里的路径是 D:\Hugo\bin ，请根据自己的bin目录进行修改</p>
-
-<h2 id="五-部署hugo">五：部署hugo</h2>
-
-<p>​       ①： 打开  D:\Hugo\Sites目录， 在目录栏 输入 cmd ，回车；</p>
-
-<p>​       ②： 在弹出的cmd窗口输入指令：D:\Hugo\Sites&gt; hugo new site zhonger.com</p>
-
-<p>​                  ps: &ldquo;zhonger.com&rdquo;  是新的网站名称，可根据自己的喜好修改</p>
-
-<p>​                命令输入完毕后，如果一切顺利，在sites目录里面生成zhonger.com的文件夹；</p>
-
-<p>​         ③： 继续输入指令：cd zhonger.com     进入zhonger.com文件夹；</p>
-
-<p>​                 继续输入指令： hugo new about.md  该指令会到 content 目录下自动生成 about.md文件；</p>
-
-<p>​         ④： 在zhonger.com 的目录下(若不是该目录，则回到此目录)   输入指令：hugo new post/first.md</p>
-
-<p>​                      ps：该步骤可以省略</p>
-
-<p>​</p>
-
-<h2 id="六-安装皮肤">六：安装皮肤</h2>
-
-<p>​          ①：输入指令：cd themes   进入themes目录</p>
-
-<p>​          ②： 输入指令： git clone git://github.com/dim0627/hugo_theme_aglaus aglaus 克隆一份皮肤</p>
-
-<p>​                          ps：皮肤的官网是：<a href="https://themes.gohugo.io/">https://themes.gohugo.io/</a>  可以从上面选择自己喜欢的皮肤，</p>
-
-<p>​                                  clone时记得把地址的http改成 git，否则会clone失败</p>
-
-<p>​           ③：到 D:\Hugo\Sites\zhonger.com\themes\自己下载的主题名称\exampleSite 目录，把该目录下的</p>
-
-<p>​                    config.toml文件 复制到  zhonger.com目录下</p>
-
-<h2 id="七-运行hugo">七：运行hugo</h2>
-
-<p>​            ①：输入指令：hugo server   若出现下图的文字，则说明，启动成功</p>
-
-<p><img src="https://zhonger.xyz/hugoZhengHe/hugo_5.png" alt="" /></p>
-
-<p>​       ②： 用 <a href="http://localhost:1313/">http://localhost:1313/</a>  来访问自己搭建的博客。</p>
-
-<p>​</p>
-
-<h1 id="github">github:</h1>
-
-<h2 id="第一步-在自己的github账号上新建一个仓库-名字是-自己账号名称的小写-github-io">第一步：在自己的github账号上新建一个仓库，名字是：自己账号名称的小写.github.io</h2>
-
-<p>​                 笔者账号ID：zhonger94，仓库名称：zhonger94.github.io</p>
-
-<p><img src="https://zhonger.xyz/hugoZhengHe/github_1.png" alt="" /></p>
-
-<h2 id="第二步-按-ctrl-c-停止hugo-输入指令">第二步： 按 ctrl+c 停止hugo，输入指令:</h2>
-
-<p>​                hugo &ndash;theme=hugo-tranquilpeak-theme &ndash;baseUrl=&ldquo;<a href="https://zhonger94.github.io/&quot;">https://zhonger94.github.io/&quot;</a> &ndash;buildDrafts</p>
-
-<p><img src="https://zhonger.xyz/hugoZhengHe/github_2.png" alt="1615638467601" /></p>
-
-<p>​               会在当前zhonger.com目录生成一个public文件夹</p>
-
-<p>​                   ps：baseUrl所填写的地址格式是：http://自己仓库的名字/</p>
-
-<h2 id="第三步-在自己本地磁盘任意目录-打开git软件-输入指令-git-clone-自己仓库的ssh地址-或者https地址">第三步： 在自己本地磁盘任意目录，打开git软件，输入指令: git clone  自己仓库的SSH地址（或者https地址）</h2>
-
-<p>​               打开 clone 得到的 文件夹，复制里面的 .git文件夹到 public文件夹里</p>
-
-<h2 id="第四步-在public文件夹-里打开-git软件-输入指令">第四步： 在public文件夹 里打开 git软件，输入指令</h2>
-
-<p>​                ①：git add .      #提交到暂存区</p>
-
-<p>​                ②：git commit -m &ldquo;备注的信息&rdquo;   #提交到本地库</p>
-
-<p>​                ③： git push     #提交到github</p>
-
-<p>​               通过以上指令把本地的hugo上传到github仓库</p>
-
-<h2 id="第五步-打开浏览器-输入-https-zhonger94-github-io-即可访问自己的博客-无需在cmd窗口输入指令-hugo-server">第五步:  打开浏览器，输入 <a href="https://zhonger94.github.io/">https://zhonger94.github.io/</a>   ，即可访问自己的博客,无需在cmd窗口输入指令  hugo server</h2>
-
-<h3 id="aliyun"># Aliyun:</h3>
-
-<h2 id="第一步-登录aliyun官方网站-查找自己喜欢的域名-付款购买">第一步：登录aliyun官方网站，查找自己喜欢的域名，付款购买</h2>
-
-<p><img src="https://zhonger.xyz/hugoZhengHe/aliyun_1.png" alt="1615638728051" /></p>
-
-<p>​</p>
-
-<h2 id="第二步-解析域名">第二步：解析域名</h2>
-
-<p><img src="https://zhonger.xyz/hugoZhengHe/aliyun_2.png" alt="1615638931574" /></p>
-
-<p><img src="https://zhonger.xyz/hugoZhengHe/aliyun_3.png" alt="1615638968625" /></p>
-
-<p><img src="https://zhonger.xyz/hugoZhengHe/aliyun_4.png" alt="1615639030837" /></p>
-
-<h2 id="第三步-github修改仓库的-setting-往下拉-找到custom-domain-输入自己购买的域名-点击保存">第三步：github修改仓库的 setting，往下拉，找到Custom domain，输入自己购买的域名，点击保存</h2>
-
-<p><img src="https://zhonger.xyz/hugoZhengHe/aliyun_5.png" alt="1615639162106" /></p>
-
-<p><img src="https://zhonger.xyz/hugoZhengHe/aliyun_6.png" alt="1615639296522" /></p>
-
-<h2 id="第四步-在浏览器输入自己购买的域名-即可访问博客">第四步：在浏览器输入自己购买的域名，即可访问博客。</h2>
-
-<p>最后：把自己想要发表的文章放进 D:\Hugo\Sites\zhonger.com\content\post 目录下即可</p>
-
-<p>​              ps：文件需要.md格式，模板可参考</p>
-
-<p>​                D:\Hugo\Sites\zhonger.com\themes\hugo-tranquilpeak-theme\exampleSite\content\post目录下    的文件</p>
-
-<p>注意：每次更新博客后，都需要重新打包public 并上传到github 。</p>
-
-<h3 id="附上配置文件-config-toml-的相关注解">附上配置文件 config.toml 的相关注解：</h3>
-
-<p>baseURL = &ldquo;<a href="https://your_name.github.io/your_name/&quot;">https://your_name.github.io/your_name/&quot;</a></p>
-
-<h2 id="tips-必须配置-否则上传的博客在github-pages无法找到css文件-不产生样式">Tips: 必须配置，否则上传的博客在GitHub Pages无法找到css文件，不产生样式</h2>
-
-<p>languageCode = &ldquo;en-us&rdquo;</p>
-
-<p>defaultContentLanguage = &ldquo;zh-cn&rdquo;</p>
-
-<h2 id="tips-配置中文">Tips: 配置中文</h2>
-
-<p>title = &ldquo;zhonger-blog&rdquo;</p>
-
-<h2 id="tips-博客名称">Tips: 博客名称</h2>
-
-<p>theme = &ldquo;tranquilpeak&rdquo;</p>
-
-<h2 id="tips-配置主题">Tips: 配置主题</h2>
-
-<p>disqusShortname = &ldquo;valine&rdquo;</p>
-
-<h2 id="tips-评论系统">Tips: 评论系统</h2>
-
-<p>paginate = 10</p>
-
-<h2 id="tips-每个页面显示的文章数">Tips: 每个页面显示的文章数</h2>
-
-<p>[permalinks]</p>
-
-<p>post = &ldquo;/:year/:month/:slug/&rdquo;</p>
-
-<p>[taxonomies]</p>
-
-<p>tag = &ldquo;tags&rdquo;</p>
-
-<p>category = &ldquo;categories&rdquo;</p>
-
-<p>archive = &ldquo;archives&rdquo;</p>
-
-<h2 id="tips-定义的博客分类与逻辑关系">Tips: 定义的博客分类与逻辑关系</h2>
-
-<p>[author]</p>
-
-<p>name = &ldquo;your_name&rdquo;</p>
-
-<h2 id="tips-博客侧边栏名字">Tips: 博客侧边栏名字</h2>
-
-<p>bio = &ldquo;后端开发&rdquo;</p>
-
-<h2 id="tips-博客侧边栏个人简介">Tips: 博客侧边栏个人简介</h2>
-
-<p>job = &ldquo;After-end&rdquo;</p>
-
-<h2 id="tips-博客侧边栏职业">Tips: 博客侧边栏职业</h2>
-
-<p>location = &ldquo;China&rdquo;</p>
-
-<h2 id="tips-博客个人资料页面地址">Tips: 博客个人资料页面地址</h2>
-
-<p>gravatarEmail = &ldquo;932578590@qq.com&rdquo;</p>
-
-<h2 id="tips-博客个人头像-取自wordpress头像">Tips: 博客个人头像，取自WordPress头像</h2>
-
-<p>[[menu.main]]</p>
-
-<p>weight = 1</p>
-
-<p>identifier = &ldquo;首页&rdquo;</p>
-
-<p>name = &ldquo;首页&rdquo;</p>
-
-<p>pre = &ldquo;<i class=\"sidebar-button-icon fa fa-lg fa-home\"></i>&ldquo;</p>
-
-<p>url = &ldquo;/&rdquo;</p>
-
-<p>&hellip;</p>
-
-<p>[[menu.links]]</p>
-
-<p>&hellip;</p>
-
-<p>[[menu.misc]]</p>
-
-<h2 id="tips-定义的侧边栏菜单-icon取自font-awesome">Tips: 定义的侧边栏菜单，icon取自Font-awesome</h2>
-
-<p>[params]</p>
-
-<p>dateFormat = &ldquo;2006年1月2日&rdquo;</p>
-
-<h2 id="tips-默认日期格式">Tips: 默认日期格式</h2>
-
-<p>syntaxHighlighter = &ldquo;highlight.js&rdquo;</p>
-
-<h2 id="tips-语法高亮js库">Tips: 语法高亮js库</h2>
-
-<p>clearReading = true</p>
-
-<h2 id="tips-进入文章内容页面侧边栏菜单收起状态">Tips: 进入文章内容页面侧边栏菜单收起状态</h2>
-
-<p>hierarchicalCategories = true</p>
-
-<p>sidebarBehavior = 2</p>
-
-<h2 id="tips-定义侧边栏状态-值为1-6-可自行测试显示状态">Tips: 定义侧边栏状态（值为1-6，可自行测试显示状态）</h2>
-
-<p>coverImage = &ldquo;cover.jpg&rdquo;</p>
-
-<p>imageGallery = true</p>
-
-<h2 id="tips-在有内容底部显示照片墙">Tips: 在有内容底部显示照片墙</h2>
-
-<p>thumbnailImage = true</p>
-
-<h2 id="tips-列表页是否显示内容图片">Tips: 列表页是否显示内容图片</h2>
-
-<p>thumbnailImagePosition = &ldquo;bottom&rdquo;</p>
-
-<h2 id="tips-列表页显示内容图片在底部">Tips: 列表页显示内容图片在底部</h2>
-
-<p>autoThumbnailImage = true</p>
-
-<p>favicon = &ldquo;/favicon.ico&rdquo;</p>
-
-<h2 id="tips-浏览器标签页本网站显示的图标-放置在static文件夹下">Tips: 浏览器标签页本网站显示的图标，放置在static文件夹下</h2>
-
-<p>[params.header.rightLink]</p>
-
-<p>class = &ldquo;&rdquo;</p>
-
-<p>icon = &ldquo;&rdquo;</p>
-
-<p>url = &ldquo;/#about&rdquo;</p>
-
-<h2 id="tips-是否显示页面头部右侧个人头像-及个人头像点击事件">Tips: 是否显示页面头部右侧个人头像，及个人头像点击事件</h2>
-
-<p>[params.valine]</p>
-
-<p>enable = true</p>
-
-<p>appId = &lsquo;your appid&rsquo;</p>
-
-<p>appKey = &lsquo;your appkey&rsquo;</p>
-
-<p>notify = false</p>
-
-<p>avatar = &lsquo;mm&rsquo;</p>
-
-<p>placeholder = &lsquo;说点什么吧&hellip;&rsquo;</p>
-
-<p>visitor = true</p>
-
-<h2 id="这里添加valine评论系统的相关参数">这里添加Valine评论系统的相关参数</h2>
-
-<p>以下为笔者参考的网站：</p>
-
-<p>​               <a href="https://www.daniao.org/5331.html">https://www.daniao.org/5331.html</a></p>
-
-<p>​               <a href="https://www.jianshu.com/p/ebf819ecf955">https://www.jianshu.com/p/ebf819ecf955</a></p>
+              <p>​   斐波那契数列</p>
+
+<h1 id="问题-有n步台阶-一次只能上-1-步或者-2-步-共有多少种走法">问题：有N步台阶，一次只能上 1 步或者 2 步，共有多少种走法？</h1>
+
+<pre><code class="language-java">public class Recursion {
+    /**
+     * 有N步台阶，一次只能上 1 步或者 2 步，共有多少种走法？
+     * n &gt; 3,f(n) = f(n-1) + f(n-2)
+     */
+    //方法一：递归
+    public int getSteps1(int n) {
+        if (n &lt; 1) {
+            throw new ArithmeticException(&quot;n不能小于1&quot;);
+        }
+        if (n == 1 || n == 2) {
+            return n;
+        }
+
+        return getSteps1(n - 1) + getSteps1(n - 2);
+    }
+
+
+    //方法二：循环迭代
+    public int getSteps2(int n) {
+        if (n &lt; 1) {
+            throw new ArithmeticException(&quot;n不能小于1&quot;);
+        }
+        if (n == 1 || n == 2) {
+            return n;
+        }
+
+        int one = 1;
+        int two = 2;
+        int sum = 0;
+
+        for (int i = 3; i &lt;= n; i++) {
+            sum = one + two;
+            one = two;
+            two = sum;
+        }
+        return sum;
+    }
+
+    //方法三：斐波那契数列
+    public int getSteps3(int n) {
+        if (n &lt; 1) {
+            throw new ArithmeticException(&quot;n不能小于1&quot;);
+        }
+        if (n == 1 || n == 2) {
+            return n;
+        }
+
+        int[] ints = new int[n];
+        ints[0] = 1;
+        ints[1] = 2;
+        for (int i = 2; i &lt; ints.length; i++) {
+            ints[i] = ints[i-1] + ints[i-2];
+        }
+        return ints[n-1];
+    }
+
+    public static void main(String[] args) {
+        Recursion recursion = new Recursion();
+        System.out.println(recursion.getSteps1(40));
+        System.out.println(recursion.getSteps2(40));
+        System.out.println(recursion.getSteps3(40));
+    }
+}
+</code></pre>
               
             </div>
           </div>
@@ -589,7 +343,7 @@
                   <div class="post-footer-tags">
                     <span class="text-color-light text-small">标签</span><br/>
                     
-  <a class="tag tag--primary tag--small" href="https://zhonger.xyz/tags/chinese/">chinese</a>
+  <a class="tag tag--primary tag--small" href="https://zhonger.xyz/tags/java/">java</a>
 
                   </div>
                 
@@ -602,7 +356,7 @@
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--disabled">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://zhonger.xyz/2021/01/chinese-test/" data-tooltip="win10本地博客搭建整理">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">下一篇</span>
@@ -610,7 +364,7 @@
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://zhonger.xyz/2013/01/japanese-test/" data-tooltip="日本語テスト">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://zhonger.xyz/2015/05/i-%E8%B7%9F-i/" data-tooltip="i&#43;&#43; 跟&#43;&#43;i">
               
                   <span class="hide-xs hide-sm text-small icon-mr">上一篇</span>
                   <i class="fa fa-angle-right"></i>
@@ -688,7 +442,7 @@
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--disabled">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://zhonger.xyz/2021/01/chinese-test/" data-tooltip="win10本地博客搭建整理">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">下一篇</span>
@@ -696,7 +450,319 @@
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://zhonger.xyz/2013/01/japanese-test/" data-tooltip="日本語テスト">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://zhonger.xyz/2015/05/i-%E8%B7%9F-i/" data-tooltip="i&#43;&#43; 跟&#43;&#43;i">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">上一篇</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://zhonger.xyz/2021/01/chinese-test/">
+              <i class="fa fa-facebook-official"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://zhonger.xyz/2021/01/chinese-test/">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://zhonger.xyz/2021/01/chinese-test/">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  
+</div>
+
+      </div>
+      <div id="share-options-bar" class="share-options-bar" data-behavior="5">
+  <i id="btn-close-shareoptions" class="fa fa-close"></i>
+  <ul class="share-options">
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fzhonger.xyz%2F2021%2F01%2Fchinese-test%2F">
+          <i class="fa fa-facebook-official"></i><span>分享到 Facebook</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fzhonger.xyz%2F2021%2F01%2Fchinese-test%2F">
+          <i class="fa fa-twitter"></i><span>分享到 Twitter</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https%3A%2F%2Fzhonger.xyz%2F2021%2F01%2Fchinese-test%2F">
+          <i class="fa fa-google-plus"></i><span>分享到 Google&#43;</span>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
+    </div>
+    
+    <div id="about">
+  <div id="about-card">
+    <div id="about-btn-close">
+      <i class="fa fa-remove"></i>
+    </div>
+    
+      <img id="about-card-picture" src="https://www.gravatar.com/avatar/a4bf5f5bec56803e6ed1c59e972e53a5?s=110" alt="作者的图片" />
+    
+    <h4 id="about-card-name">zhonger</h4>
+    
+      <div id="about-card-bio"><strong><em>java AND jp</em></strong></div>
+    
+    
+      <div id="about-card-job">
+        <i class="fa fa-briefcase"></i>
+        <br/>
+        After-end
+      </div>
+    
+    
+      <div id="about-card-location">
+        <i class="fa fa-map-marker"></i>
+        <br/>
+        China
+      </div>
+    
+  </div>
+</div>
+
+    
+
+    
+  
+    
+      <div id="cover" style="background-image:url('https://zhonger.xyz/images/cover.jpg');"></div>
+    
+  
+
+
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.7/js/jquery.fancybox.min.js" integrity="sha256-GEAnjcTqVP+vBp3SSc8bEDQqvWAZMiHyUSIorrWwH50=" crossorigin="anonymous"></script>
+
+
+<script src="https://zhonger.xyz/js/script-pcw6v3xilnxydl1vddzazdverrnn9ctynvnxgwho987mfyqkuylcb1nlt.min.js"></script>
+
+
+<script lang="javascript">
+window.onload = updateMinWidth;
+window.onresize = updateMinWidth;
+document.getElementById("sidebar").addEventListener("transitionend", updateMinWidth);
+function updateMinWidth() {
+  var sidebar = document.getElementById("sidebar");
+  var main = document.getElementById("main");
+  main.style.minWidth = "";
+  var w1 = getComputedStyle(main).getPropertyValue("min-width");
+  var w2 = getComputedStyle(sidebar).getPropertyValue("width");
+  var w3 = getComputedStyle(sidebar).getPropertyValue("left");
+  main.style.minWidth = `calc(${w1} - ${w2} - ${w3})`;
+}
+</script>
+
+<script>
+$(document).ready(function() {
+  hljs.configure({ classPrefix: '', useBR: false });
+  $('pre.code-highlight > code, pre > code').each(function(i, block) {
+    if (!$(this).hasClass('codeblock')) {
+      $(this).addClass('codeblock');
+    }
+    hljs.highlightBlock(block);
+  });
+});
+</script>
+
+
+  
+    
+      <script>
+        var disqus_config = function () {
+          this.page.url = 'https:\/\/zhonger.xyz\/2021\/01\/chinese-test\/';
+          
+            this.page.identifier = '\/2021\/01\/chinese-test\/'
+          
+        };
+        (function() {
+          
+          
+          if (window.location.hostname == "localhost") {
+            return;
+          }
+          var d = document, s = d.createElement('script');
+          var disqus_shortname = 'hugo-tranquilpeak-theme';
+          s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+        })();
+      </script>
+    
+  
+
+
+
+
+    
+  </body>
+</html>
+
+>​</p>
+              
+            </div>
+          </div>
+          <div id="post-footer" class="post-footer main-content-wrap">
+            
+              
+                
+                
+                  <div class="post-footer-tags">
+                    <span class="text-color-light text-small">标签</span><br/>
+                    
+  <a class="tag tag--primary tag--small" href="https://zhonger.xyz/tags/chinese/">chinese</a>
+
+                  </div>
+                
+              
+            
+            <div class="post-actions-wrap">
+  
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://zhonger.xyz/2021/01/chinese-test/" data-tooltip="Singleton">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">下一篇</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://zhonger.xyz/2021/01/chinese-test/" data-tooltip="走台阶">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">上一篇</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://zhonger.xyz/2021/01/chinese-test/">
+              <i class="fa fa-facebook-official"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://zhonger.xyz/2021/01/chinese-test/">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://zhonger.xyz/2021/01/chinese-test/">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  
+</div>
+
+            
+              
+                <div id="disqus_thread">
+  <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+              
+            
+          </div>
+        </article>
+        <footer id="footer" class="main-content-wrap">
+  <span class="copyrights">
+    &copy; 2021 zhonger. All Rights Reserved
+  </span>
+</footer>
+
+      </div>
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="5">
+        <div class="post-actions-wrap">
+  
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://zhonger.xyz/2021/01/chinese-test/" data-tooltip="Singleton">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">下一篇</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://zhonger.xyz/2021/01/chinese-test/" data-tooltip="走台阶">
               
                   <span class="hide-xs hide-sm text-small icon-mr">上一篇</span>
                   <i class="fa fa-angle-right"></i>
