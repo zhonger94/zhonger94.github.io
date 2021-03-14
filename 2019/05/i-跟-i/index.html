@@ -8,25 +8,25 @@
 <meta name="generator" content="Hugo 0.55.6 with theme Tranquilpeak 0.4.8-BETA">
 <meta name="author" content="zhonger">
 <meta name="keywords" content="">
-<meta name="description" content="​   斐波那契数列">
+<meta name="description" content="​    自增变量">
 
 
-<meta property="og:description" content="​   斐波那契数列">
+<meta property="og:description" content="​    自增变量">
 <meta property="og:type" content="article">
-<meta property="og:title" content="走台阶">
-<meta name="twitter:title" content="走台阶">
-<meta property="og:url" content="https://zhonger.xyz/2021/01/chinese-test/">
-<meta property="twitter:url" content="https://zhonger.xyz/2021/01/chinese-test/">
+<meta property="og:title" content="i&#43;&#43; 跟&#43;&#43;i">
+<meta name="twitter:title" content="i&#43;&#43; 跟&#43;&#43;i">
+<meta property="og:url" content="https://zhonger.xyz/2019/05/i-%E8%B7%9F-i/">
+<meta property="twitter:url" content="https://zhonger.xyz/2019/05/i-%E8%B7%9F-i/">
 <meta property="og:site_name" content="zhonger-blog">
-<meta property="og:description" content="​   斐波那契数列">
-<meta name="twitter:description" content="​   斐波那契数列">
+<meta property="og:description" content="​    自增变量">
+<meta name="twitter:description" content="​    自增变量">
 <meta property="og:locale" content="zh-cn">
 
   
-    <meta property="article:published_time" content="2021-01-02T00:00:00">
+    <meta property="article:published_time" content="2019-05-13T00:00:00">
   
   
-    <meta property="article:modified_time" content="2021-01-02T00:00:00">
+    <meta property="article:modified_time" content="2019-05-13T00:00:00">
   
   
   
@@ -51,9 +51,12 @@
 
 
 
-  <meta property="og:image" content="//d1u9biwaxjngwg.cloudfront.net/chinese-test-post/vintage-140.jpg">
-  <meta property="twitter:image" content="//d1u9biwaxjngwg.cloudfront.net/chinese-test-post/vintage-140.jpg">
+  <meta property="og:image" content="//d1u9biwaxjngwg.cloudfront.net/cover-image-showcase/city-750.jpg">
+  <meta property="twitter:image" content="//d1u9biwaxjngwg.cloudfront.net/cover-image-showcase/city-750.jpg">
 
+
+  <meta property="og:image" content="//d1u9biwaxjngwg.cloudfront.net/cover-image-showcase/city.jpg">
+  <meta property="twitter:image" content="//d1u9biwaxjngwg.cloudfront.net/cover-image-showcase/city.jpg">
 
 
 
@@ -62,14 +65,14 @@
   <meta property="twitter:image" content="https://www.gravatar.com/avatar/a4bf5f5bec56803e6ed1c59e972e53a5?s=640">
 
 
-    <title>走台阶</title>
+    <title>i&#43;&#43; 跟&#43;&#43;i</title>
 
     <link rel="icon" href="https://zhonger.xyz/favicon.ico">
     
 
     
 
-    <link rel="canonical" href="https://zhonger.xyz/2021/01/chinese-test/">
+    <link rel="canonical" href="https://zhonger.xyz/2019/05/i-%E8%B7%9F-i/">
 
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
@@ -218,30 +221,38 @@
 </nav>
 
       
+  <div class="post-header-cover
+              text-center
+              "
+       style="background-image:url('//d1u9biwaxjngwg.cloudfront.net/cover-image-showcase/city.jpg')"
+       data-behavior="5">
+    
+  </div>
+
 
       <div id="main" data-behavior="5"
-        class="
-               hasCoverMetaIn
+        class="hasCover
+               hasCoverMetaOut
                ">
         <article class="post" itemscope itemType="http://schema.org/BlogPosting">
           
           
-            <div class="post-header main-content-wrap text-left">
+            <div class="post-header main-content-wrap text-center">
   
     <h1 class="post-title" itemprop="headline">
-      走台阶
+      i&#43;&#43; 跟&#43;&#43;i
     </h1>
   
   
   <div class="postShorten-meta post-meta">
     
-      <time itemprop="datePublished" datetime="2021-01-02T00:00:00Z">
+      <time itemprop="datePublished" datetime="2019-05-13T00:00:00Z">
         
   
   
   
   
-    2 一月 2021
+    13 五月 2019
   
 
       </time>
@@ -263,75 +274,34 @@
           
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
-              <p>​   斐波那契数列</p>
+              <p>​    自增变量</p>
 
-<h1 id="问题-有n步台阶-一次只能上-1-步或者-2-步-共有多少种走法">问题：有N步台阶，一次只能上 1 步或者 2 步，共有多少种走法？</h1>
+<p>例题：</p>
 
-<pre><code class="language-java">public class Recursion {
-    /**
-     * 有N步台阶，一次只能上 1 步或者 2 步，共有多少种走法？
-     * n &gt; 3,f(n) = f(n-1) + f(n-2)
-     */
-    //方法一：递归
-    public int getSteps1(int n) {
-        if (n &lt; 1) {
-            throw new ArithmeticException(&quot;n不能小于1&quot;);
-        }
-        if (n == 1 || n == 2) {
-            return n;
-        }
-
-        return getSteps1(n - 1) + getSteps1(n - 2);
+<pre><code class="language-java">    public static void main(String[] args) {
+        int i = 1;
+        i = i++;
+        int j = i++;
+        int k = i + ++i * i++;
+        System.out.println(&quot;i=&quot; + i);
+        System.out.println(&quot;j=&quot; + j);
+        System.out.println(&quot;k=&quot; + k);
     }
-
-
-    //方法二：循环迭代
-    public int getSteps2(int n) {
-        if (n &lt; 1) {
-            throw new ArithmeticException(&quot;n不能小于1&quot;);
-        }
-        if (n == 1 || n == 2) {
-            return n;
-        }
-
-        int one = 1;
-        int two = 2;
-        int sum = 0;
-
-        for (int i = 3; i &lt;= n; i++) {
-            sum = one + two;
-            one = two;
-            two = sum;
-        }
-        return sum;
-    }
-
-    //方法三：斐波那契数列
-    public int getSteps3(int n) {
-        if (n &lt; 1) {
-            throw new ArithmeticException(&quot;n不能小于1&quot;);
-        }
-        if (n == 1 || n == 2) {
-            return n;
-        }
-
-        int[] ints = new int[n];
-        ints[0] = 1;
-        ints[1] = 2;
-        for (int i = 2; i &lt; ints.length; i++) {
-            ints[i] = ints[i-1] + ints[i-2];
-        }
-        return ints[n-1];
-    }
-
-    public static void main(String[] args) {
-        Recursion recursion = new Recursion();
-        System.out.println(recursion.getSteps1(40));
-        System.out.println(recursion.getSteps2(40));
-        System.out.println(recursion.getSteps3(40));
-    }
-}
 </code></pre>
+
+<pre><code class="language-java">答案过程：  i = 1,2,4 
+          j = 1
+          k = 2 + 3 * 3 = 11
+         
+最终答案：i = 4; j = 1; k = 11        
+</code></pre>
+
+<pre><code class="language-java">注意点： int i  =  i++;  
+主要分为3个步骤：① 把i的值压入栈中; ② i自增1;  ③：把栈中i的值赋给变量i；
+     
+</code></pre>
+
+<p>​</p>
               
             </div>
           </div>
@@ -356,7 +326,7 @@
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://zhonger.xyz/2021/01/chinese-test/" data-tooltip="win10本地博客搭建整理">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://zhonger.xyz/2020/03/singleton/" data-tooltip="singleton">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">下一篇</span>
@@ -364,7 +334,7 @@
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://zhonger.xyz/2020/03/singleton/" data-tooltip="singleton">
+                <a class="post-action-btn btn btn--disabled">
               
                   <span class="hide-xs hide-sm text-small icon-mr">上一篇</span>
                   <i class="fa fa-angle-right"></i>
@@ -382,19 +352,19 @@
         </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://zhonger.xyz/2021/01/chinese-test/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://zhonger.xyz/2019/05/i-%E8%B7%9F-i/">
               <i class="fa fa-facebook-official"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://zhonger.xyz/2021/01/chinese-test/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://zhonger.xyz/2019/05/i-%E8%B7%9F-i/">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://zhonger.xyz/2021/01/chinese-test/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://zhonger.xyz/2019/05/i-%E8%B7%9F-i/">
               <i class="fa fa-google-plus"></i>
             </a>
           </li>
@@ -442,7 +412,7 @@
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://zhonger.xyz/2021/01/chinese-test/" data-tooltip="win10本地博客搭建整理">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://zhonger.xyz/2020/03/singleton/" data-tooltip="singleton">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">下一篇</span>
@@ -450,7 +420,7 @@
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://zhonger.xyz/2020/03/singleton/" data-tooltip="singleton">
+                <a class="post-action-btn btn btn--disabled">
               
                   <span class="hide-xs hide-sm text-small icon-mr">上一篇</span>
                   <i class="fa fa-angle-right"></i>
@@ -468,19 +438,19 @@
         </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://zhonger.xyz/2021/01/chinese-test/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://zhonger.xyz/2019/05/i-%E8%B7%9F-i/">
               <i class="fa fa-facebook-official"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://zhonger.xyz/2021/01/chinese-test/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://zhonger.xyz/2019/05/i-%E8%B7%9F-i/">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://zhonger.xyz/2021/01/chinese-test/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://zhonger.xyz/2019/05/i-%E8%B7%9F-i/">
               <i class="fa fa-google-plus"></i>
             </a>
           </li>
@@ -510,19 +480,19 @@
   <ul class="share-options">
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fzhonger.xyz%2F2021%2F01%2Fchinese-test%2F">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fzhonger.xyz%2F2019%2F05%2Fi-%25E8%25B7%259F-i%2F">
           <i class="fa fa-facebook-official"></i><span>分享到 Facebook</span>
         </a>
       </li>
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fzhonger.xyz%2F2021%2F01%2Fchinese-test%2F">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fzhonger.xyz%2F2019%2F05%2Fi-%25E8%25B7%259F-i%2F">
           <i class="fa fa-twitter"></i><span>分享到 Twitter</span>
         </a>
       </li>
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https%3A%2F%2Fzhonger.xyz%2F2021%2F01%2Fchinese-test%2F">
+        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https%3A%2F%2Fzhonger.xyz%2F2019%2F05%2Fi-%25E8%25B7%259F-i%2F">
           <i class="fa fa-google-plus"></i><span>分享到 Google&#43;</span>
         </a>
       </li>
@@ -614,9 +584,9 @@ $(document).ready(function() {
     
       <script>
         var disqus_config = function () {
-          this.page.url = 'https:\/\/zhonger.xyz\/2021\/01\/chinese-test\/';
+          this.page.url = 'https:\/\/zhonger.xyz\/2019\/05\/i-%E8%B7%9F-i\/';
           
-            this.page.identifier = '\/2021\/01\/chinese-test\/'
+            this.page.identifier = '\/2019\/05\/i-%E8%B7%9F-i\/'
           
         };
         (function() {
