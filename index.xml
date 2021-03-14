@@ -21,21 +21,21 @@
     </item>
     
     <item>
+      <title>win10本地博客搭建整理</title>
+      <link>https://zhonger.xyz/2021/01/chinese-test/</link>
+      <pubDate>Sat, 02 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://zhonger.xyz/2021/01/chinese-test/</guid>
+      <description>&lt;p&gt;采用：hugo + github + aliyun&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>日本語テスト</title>
       <link>https://zhonger.xyz/2013/01/japanese-test/</link>
       <pubDate>Wed, 02 Jan 2013 00:00:00 +0000</pubDate>
       
       <guid>https://zhonger.xyz/2013/01/japanese-test/</guid>
       <description>&lt;p&gt;This is a Japanese test post to show you how japanese is displayed.&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>win10本地博客搭建整理</title>
-      <link>https://zhonger.xyz/1/01/chinese-test/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://zhonger.xyz/1/01/chinese-test/</guid>
-      <description>&lt;p&gt;采用：hugo + github + aliyun&lt;/p&gt;</description>
     </item>
     
   </channel>
