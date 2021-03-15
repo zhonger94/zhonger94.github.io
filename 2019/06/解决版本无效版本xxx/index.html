@@ -8,25 +8,25 @@
 <meta name="generator" content="Hugo 0.55.6 with theme Tranquilpeak 0.4.8-BETA">
 <meta name="author" content="zhonger">
 <meta name="keywords" content="">
-<meta name="description" content="单例模式">
+<meta name="description" content="​    详情点我">
 
 
-<meta property="og:description" content="单例模式">
+<meta property="og:description" content="​    详情点我">
 <meta property="og:type" content="article">
-<meta property="og:title" content="singleton">
-<meta name="twitter:title" content="singleton">
-<meta property="og:url" content="https://zhonger.xyz/2020/03/singleton/">
-<meta property="twitter:url" content="https://zhonger.xyz/2020/03/singleton/">
+<meta property="og:title" content="解决版本无效版本xxx">
+<meta name="twitter:title" content="解决版本无效版本xxx">
+<meta property="og:url" content="https://zhonger.xyz/2019/06/%E8%A7%A3%E5%86%B3%E7%89%88%E6%9C%AC%E6%97%A0%E6%95%88%E7%89%88%E6%9C%ACxxx/">
+<meta property="twitter:url" content="https://zhonger.xyz/2019/06/%E8%A7%A3%E5%86%B3%E7%89%88%E6%9C%AC%E6%97%A0%E6%95%88%E7%89%88%E6%9C%ACxxx/">
 <meta property="og:site_name" content="zhonger-blog">
-<meta property="og:description" content="单例模式">
-<meta name="twitter:description" content="单例模式">
+<meta property="og:description" content="​    详情点我">
+<meta name="twitter:description" content="​    详情点我">
 <meta property="og:locale" content="zh-cn">
 
   
-    <meta property="article:published_time" content="2020-03-02T00:00:00">
+    <meta property="article:published_time" content="2019-06-23T00:00:00">
   
   
-    <meta property="article:modified_time" content="2020-03-02T00:00:00">
+    <meta property="article:modified_time" content="2019-06-23T00:00:00">
   
   
   
@@ -51,9 +51,12 @@
 
 
 
-  <meta property="og:image" content="//d1u9biwaxjngwg.cloudfront.net/japanese-test-post/peak-140.jpg">
-  <meta property="twitter:image" content="//d1u9biwaxjngwg.cloudfront.net/japanese-test-post/peak-140.jpg">
+  <meta property="og:image" content="//d1u9biwaxjngwg.cloudfront.net/cover-image-showcase/city-750.jpg">
+  <meta property="twitter:image" content="//d1u9biwaxjngwg.cloudfront.net/cover-image-showcase/city-750.jpg">
 
+
+  <meta property="og:image" content="//d1u9biwaxjngwg.cloudfront.net/cover-image-showcase/city.jpg">
+  <meta property="twitter:image" content="//d1u9biwaxjngwg.cloudfront.net/cover-image-showcase/city.jpg">
 
 
 
@@ -62,14 +65,14 @@
   <meta property="twitter:image" content="https://www.gravatar.com/avatar/a4bf5f5bec56803e6ed1c59e972e53a5?s=640">
 
 
-    <title>singleton</title>
+    <title>解决版本无效版本xxx</title>
 
     <link rel="icon" href="https://zhonger.xyz/favicon.ico">
     
 
     
 
-    <link rel="canonical" href="https://zhonger.xyz/2020/03/singleton/">
+    <link rel="canonical" href="https://zhonger.xyz/2019/06/%E8%A7%A3%E5%86%B3%E7%89%88%E6%9C%AC%E6%97%A0%E6%95%88%E7%89%88%E6%9C%ACxxx/">
 
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
@@ -218,30 +221,38 @@
 </nav>
 
       
+  <div class="post-header-cover
+              text-center
+              "
+       style="background-image:url('//d1u9biwaxjngwg.cloudfront.net/cover-image-showcase/city.jpg')"
+       data-behavior="5">
+    
+  </div>
+
 
       <div id="main" data-behavior="5"
-        class="
-               hasCoverMetaIn
+        class="hasCover
+               hasCoverMetaOut
                ">
         <article class="post" itemscope itemType="http://schema.org/BlogPosting">
           
           
-            <div class="post-header main-content-wrap text-left">
+            <div class="post-header main-content-wrap text-center">
   
     <h1 class="post-title" itemprop="headline">
-      singleton
+      解决版本无效版本xxx
     </h1>
   
   
   <div class="postShorten-meta post-meta">
     
-      <time itemprop="datePublished" datetime="2020-03-02T00:00:00Z">
+      <time itemprop="datePublished" datetime="2019-06-23T00:00:00Z">
         
   
   
   
   
-    2 三月 2020
+    23 六月 2019
   
 
       </time>
@@ -263,97 +274,25 @@
           
           <div class="post-content markdown" itemprop="articleBody">
             <div class="main-content-wrap">
-              <p>单例模式</p>
+              <p>​    详情点我</p>
 
-<h1 id="饿汉式-直接创建对象-不存在线程安全问题">饿汉式：直接创建对象，不存在线程安全问题</h1>
+<p>​   在 pom.xml 引入以下依赖即可：</p>
 
-<pre><code class="language-java"> ** 直接实例化饿汉式(简洁直观) ***
-    
-    public class Person {
-        public final static Person PERSON = new Penson;
-        
-        private Person() {}
-    }
-</code></pre>
-
-<pre><code class="language-java">*** 枚举式 (最简洁) ***
-    public enum Person {
-        PERSON
-    }
-    
-</code></pre>
-
-<pre><code class="language-java">*** 静态代码块饿汉式(适合复杂实例化)***
-    
-    public class Person {
-        public static final Person PERSON;
-        
-        private Person() {}
-        
-         static  {
-             // 需要额外添加的业务逻辑...
-            person = new Person();
-        }
-        
-    }
-    
-</code></pre>
-
-<h1 id="懒汉式-延迟创建对象">懒汉式：延迟创建对象</h1>
-
-<pre><code class="language-java">*** 线程不安全(使用于单线程) ***
-    
-    public class Person {
-        private Person person;
-        
-        private Person(){}
-        
-        public static Person getInstance() {
-            if (person == null) {
-                person = new Person();
-            }
-            
-            return person;
-        }
-        
-    }
-</code></pre>
-
-<pre><code class="language-java">*** 线程安全(使用于多线程,DCL) ***
-    
- public class Person {
-    private static volatile Person person; //volatile:保证内存可见性；防止指令重排；不保证原子性
-        
-        private Person() {}
-        
-        public static Person getInstance() {
-            if ( person == null) {
-                synchronized(Person.class) {
-                    if (person == null) {
-                        person = new Person();
-                    }
-                }
-            }
-            return person;
-        }
-        
-    }
-</code></pre>
-
-<pre><code class="language-java">*** 静态内部类模式 (适用于多线程) ***
-    
-    public class Person {
-        
-        private Person() {}
-        
-        private static class Nested {
-            private static final Person PERSON = new Person();
-        }
-        
-        public static Person getInstance() {
-            return Nested.PERSON;
-        }
-    }
+<pre><code class="language-pom.xml">  &lt;build&gt;
+    &lt;plugins&gt;
+        &lt;plugin&gt;
+            &lt;!--防止出现 “无效的版本xxx” 问题--&gt;
+            &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;
+            &lt;artifactId&gt;maven-compiler-plugin&lt;/artifactId&gt;
+            &lt;version&gt;3.8.0&lt;/version&gt;
+            &lt;configuration&gt;
+                &lt;!--下面的source和target的版本要跟自己的jdk版本一样--&gt;
+                &lt;source&gt;1.8&lt;/source&gt;
+                &lt;target&gt;1.8&lt;/target&gt;
+            &lt;/configuration&gt;
+        &lt;/plugin&gt;
+    &lt;/plugins&gt;
+    &lt;/build&gt;
 </code></pre>
               
             </div>
@@ -379,7 +318,7 @@
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://zhonger.xyz/2021/01/chinese-test/" data-tooltip="走台阶">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://zhonger.xyz/2019/06/fliter-%E8%B7%9F-interceptor-%E7%9A%84%E5%8C%BA%E5%88%AB/" data-tooltip="fliter 跟 interceptor 的区别">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">下一篇</span>
@@ -387,7 +326,7 @@
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://zhonger.xyz/2019/06/post%E8%A1%A8%E5%8D%95%E6%8F%90%E4%BA%A4%E7%9A%84%E5%A2%9E%E5%88%A0%E6%94%B9/" data-tooltip="post表单提交的增删改">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://zhonger.xyz/2019/06/%E4%BD%BF%E7%94%A8ssh%E6%96%B9%E5%BC%8F%E8%BF%9E%E6%8E%A5github%E6%8A%A5%E9%94%99jschexception/" data-tooltip="使用ssh方式连接GitHub报错JSchException">
               
                   <span class="hide-xs hide-sm text-small icon-mr">上一篇</span>
                   <i class="fa fa-angle-right"></i>
@@ -405,19 +344,19 @@
         </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://zhonger.xyz/2020/03/singleton/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://zhonger.xyz/2019/06/%E8%A7%A3%E5%86%B3%E7%89%88%E6%9C%AC%E6%97%A0%E6%95%88%E7%89%88%E6%9C%ACxxx/">
               <i class="fa fa-facebook-official"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://zhonger.xyz/2020/03/singleton/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://zhonger.xyz/2019/06/%E8%A7%A3%E5%86%B3%E7%89%88%E6%9C%AC%E6%97%A0%E6%95%88%E7%89%88%E6%9C%ACxxx/">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://zhonger.xyz/2020/03/singleton/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://zhonger.xyz/2019/06/%E8%A7%A3%E5%86%B3%E7%89%88%E6%9C%AC%E6%97%A0%E6%95%88%E7%89%88%E6%9C%ACxxx/">
               <i class="fa fa-google-plus"></i>
             </a>
           </li>
@@ -465,7 +404,7 @@
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://zhonger.xyz/2021/01/chinese-test/" data-tooltip="走台阶">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://zhonger.xyz/2019/06/fliter-%E8%B7%9F-interceptor-%E7%9A%84%E5%8C%BA%E5%88%AB/" data-tooltip="fliter 跟 interceptor 的区别">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">下一篇</span>
@@ -473,7 +412,7 @@
             </li>
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--default tooltip--top" href="https://zhonger.xyz/2019/06/post%E8%A1%A8%E5%8D%95%E6%8F%90%E4%BA%A4%E7%9A%84%E5%A2%9E%E5%88%A0%E6%94%B9/" data-tooltip="post表单提交的增删改">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://zhonger.xyz/2019/06/%E4%BD%BF%E7%94%A8ssh%E6%96%B9%E5%BC%8F%E8%BF%9E%E6%8E%A5github%E6%8A%A5%E9%94%99jschexception/" data-tooltip="使用ssh方式连接GitHub报错JSchException">
               
                   <span class="hide-xs hide-sm text-small icon-mr">上一篇</span>
                   <i class="fa fa-angle-right"></i>
@@ -491,19 +430,19 @@
         </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://zhonger.xyz/2020/03/singleton/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://zhonger.xyz/2019/06/%E8%A7%A3%E5%86%B3%E7%89%88%E6%9C%AC%E6%97%A0%E6%95%88%E7%89%88%E6%9C%ACxxx/">
               <i class="fa fa-facebook-official"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://zhonger.xyz/2020/03/singleton/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://zhonger.xyz/2019/06/%E8%A7%A3%E5%86%B3%E7%89%88%E6%9C%AC%E6%97%A0%E6%95%88%E7%89%88%E6%9C%ACxxx/">
               <i class="fa fa-twitter"></i>
             </a>
           </li>
         
           <li class="post-action hide-xs">
-            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://zhonger.xyz/2020/03/singleton/">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://zhonger.xyz/2019/06/%E8%A7%A3%E5%86%B3%E7%89%88%E6%9C%AC%E6%97%A0%E6%95%88%E7%89%88%E6%9C%ACxxx/">
               <i class="fa fa-google-plus"></i>
             </a>
           </li>
@@ -533,19 +472,19 @@
   <ul class="share-options">
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fzhonger.xyz%2F2020%2F03%2Fsingleton%2F">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fzhonger.xyz%2F2019%2F06%2F%25E8%25A7%25A3%25E5%2586%25B3%25E7%2589%2588%25E6%259C%25AC%25E6%2597%25A0%25E6%2595%2588%25E7%2589%2588%25E6%259C%25ACxxx%2F">
           <i class="fa fa-facebook-official"></i><span>分享到 Facebook</span>
         </a>
       </li>
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fzhonger.xyz%2F2020%2F03%2Fsingleton%2F">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fzhonger.xyz%2F2019%2F06%2F%25E8%25A7%25A3%25E5%2586%25B3%25E7%2589%2588%25E6%259C%25AC%25E6%2597%25A0%25E6%2595%2588%25E7%2589%2588%25E6%259C%25ACxxx%2F">
           <i class="fa fa-twitter"></i><span>分享到 Twitter</span>
         </a>
       </li>
     
       <li class="share-option">
-        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https%3A%2F%2Fzhonger.xyz%2F2020%2F03%2Fsingleton%2F">
+        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https%3A%2F%2Fzhonger.xyz%2F2019%2F06%2F%25E8%25A7%25A3%25E5%2586%25B3%25E7%2589%2588%25E6%259C%25AC%25E6%2597%25A0%25E6%2595%2588%25E7%2589%2588%25E6%259C%25ACxxx%2F">
           <i class="fa fa-google-plus"></i><span>分享到 Google&#43;</span>
         </a>
       </li>
@@ -637,9 +576,9 @@ $(document).ready(function() {
     
       <script>
         var disqus_config = function () {
-          this.page.url = 'https:\/\/zhonger.xyz\/2020\/03\/singleton\/';
+          this.page.url = 'https:\/\/zhonger.xyz\/2019\/06\/%E8%A7%A3%E5%86%B3%E7%89%88%E6%9C%AC%E6%97%A0%E6%95%88%E7%89%88%E6%9C%ACxxx\/';
           
-            this.page.identifier = '\/2020\/03\/singleton\/'
+            this.page.identifier = '\/2019\/06\/%E8%A7%A3%E5%86%B3%E7%89%88%E6%9C%AC%E6%97%A0%E6%95%88%E7%89%88%E6%9C%ACxxx\/'
           
         };
         (function() {
