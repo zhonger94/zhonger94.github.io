@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.55.6 with theme Tranquilpeak 0.4.8-BETA">
+<meta name="author" content="zhonger">
+<meta name="keywords" content="">
+<meta name="description" content="​    详情点我">
+
+
+<meta property="og:description" content="​    详情点我">
+<meta property="og:type" content="article">
+<meta property="og:title" content="日志输出到文件==logback工具==">
+<meta name="twitter:title" content="日志输出到文件==logback工具==">
+<meta property="og:url" content="https://zhonger.xyz/2020/05/%E6%97%A5%E5%BF%97%E8%BE%93%E5%87%BA%E5%88%B0%E6%96%87%E4%BB%B6logback%E5%B7%A5%E5%85%B7/">
+<meta property="twitter:url" content="https://zhonger.xyz/2020/05/%E6%97%A5%E5%BF%97%E8%BE%93%E5%87%BA%E5%88%B0%E6%96%87%E4%BB%B6logback%E5%B7%A5%E5%85%B7/">
+<meta property="og:site_name" content="zhonger-blog">
+<meta property="og:description" content="​    详情点我">
+<meta name="twitter:description" content="​    详情点我">
+<meta property="og:locale" content="zh-cn">
+
+  
+    <meta property="article:published_time" content="2020-05-23T00:00:00">
+  
+  
+    <meta property="article:modified_time" content="2020-05-23T00:00:00">
+  
+  
+  
+    
+      <meta property="article:section" content="tranquilpeak">
+    
+      <meta property="article:section" content="features">
+    
+  
+  
+    
+      <meta property="article:tag" content="java">
+    
+  
+
+
+<meta name="twitter:card" content="summary">
+
+
+
+
+
+
+
+  <meta property="og:image" content="//d1u9biwaxjngwg.cloudfront.net/cover-image-showcase/city-750.jpg">
+  <meta property="twitter:image" content="//d1u9biwaxjngwg.cloudfront.net/cover-image-showcase/city-750.jpg">
+
+
+  <meta property="og:image" content="//d1u9biwaxjngwg.cloudfront.net/cover-image-showcase/city.jpg">
+  <meta property="twitter:image" content="//d1u9biwaxjngwg.cloudfront.net/cover-image-showcase/city.jpg">
+
+
+
+
+  <meta property="og:image" content="https://www.gravatar.com/avatar/a4bf5f5bec56803e6ed1c59e972e53a5?s=640">
+  <meta property="twitter:image" content="https://www.gravatar.com/avatar/a4bf5f5bec56803e6ed1c59e972e53a5?s=640">
+
+
+    <title>日志输出到文件==logback工具==</title>
+
+    <link rel="icon" href="https://zhonger.xyz/favicon.ico">
+    
+
+    
+
+    <link rel="canonical" href="https://zhonger.xyz/2020/05/%E6%97%A5%E5%BF%97%E8%BE%93%E5%87%BA%E5%88%B0%E6%96%87%E4%BB%B6logback%E5%B7%A5%E5%85%B7/">
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/jquery.fancybox.min.css" integrity="sha256-vuXZ9LGmmwtjqFX1F+EKin1ThZMub58gKULUyf0qECk=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/helpers/jquery.fancybox-thumbs.min.css" integrity="sha256-SEa4XYAHihTcEP1f5gARTB2K26Uk8PsndQYHQC1f4jU=" crossorigin="anonymous" />
+    
+    
+    <link rel="stylesheet" href="https://zhonger.xyz/css/style-twzjdbqhmnnacqs0pwwdzcdbt8yhv8giawvjqjmyfoqnvazl0dalmnhdkvp7.min.css" />
+    
+    
+
+    
+      
+    
+    
+  </head>
+
+  <body>
+    <div id="blog">
+      <header id="header" data-behavior="5">
+  <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+  <div class="header-title">
+    <a class="header-title-link" href="https://zhonger.xyz/">zhonger-blog</a>
+  </div>
+  
+    
+      <a class="header-right-picture "
+         href="https://zhonger.xyz/#about">
+    
+    
+    
+      
+        <img class="header-picture" src="https://www.gravatar.com/avatar/a4bf5f5bec56803e6ed1c59e972e53a5?s=90" alt="作者的图片" />
+      
+    
+    </a>
+  
+</header>
+
+      <nav id="sidebar" data-behavior="5">
+  <div class="sidebar-container">
+    
+      <div class="sidebar-profile">
+        <a href="https://zhonger.xyz/#about">
+          <img class="sidebar-profile-picture" src="https://www.gravatar.com/avatar/a4bf5f5bec56803e6ed1c59e972e53a5?s=110" alt="作者的图片" />
+        </a>
+        <h4 class="sidebar-profile-name">zhonger</h4>
+        
+          <h5 class="sidebar-profile-bio"><strong><em>java AND jp</em></strong></h5>
+        
+      </div>
+    
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://zhonger.xyz/">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-home"></i>
+      
+      <span class="sidebar-button-desc">首页</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://zhonger.xyz/categories">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-bookmark"></i>
+      
+      <span class="sidebar-button-desc">分类</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://zhonger.xyz/tags">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-tags"></i>
+      
+      <span class="sidebar-button-desc">标签</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://zhonger.xyz/archives">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-archive"></i>
+      
+      <span class="sidebar-button-desc">归档</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://zhonger.xyz/#about">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-question"></i>
+      
+      <span class="sidebar-button-desc">关于</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://github.com/zhonger94/" target="_blank" rel="noopener">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-github"></i>
+      
+      <span class="sidebar-button-desc">GitHub</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://stackoverflow.com/users/15389330/zhonger" target="_blank" rel="noopener">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-stack-overflow"></i>
+      
+      <span class="sidebar-button-desc">Stack Overflow</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://zhonger.xyz/index.xml">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-rss"></i>
+      
+      <span class="sidebar-button-desc">RSS</span>
+    </a>
+  </li>
+
+
+    </ul>
+  </div>
+</nav>
+
+      
+  <div class="post-header-cover
+              text-center
+              "
+       style="background-image:url('//d1u9biwaxjngwg.cloudfront.net/cover-image-showcase/city.jpg')"
+       data-behavior="5">
+    
+  </div>
+
+
+      <div id="main" data-behavior="5"
+        class="hasCover
+               hasCoverMetaOut
+               ">
+        <article class="post" itemscope itemType="http://schema.org/BlogPosting">
+          
+          
+            <div class="post-header main-content-wrap text-center">
+  
+    <h1 class="post-title" itemprop="headline">
+      日志输出到文件==logback工具==
+    </h1>
+  
+  
+  <div class="postShorten-meta post-meta">
+    
+      <time itemprop="datePublished" datetime="2020-05-23T00:00:00Z">
+        
+  
+  
+  
+  
+    23 五月 2020
+  
+
+      </time>
+    
+    
+  
+  
+    <span>发布在</span>
+    
+      <a class="category-link" href="https://zhonger.xyz/categories/tranquilpeak">tranquilpeak</a>, 
+    
+      <a class="category-link" href="https://zhonger.xyz/categories/features">features</a>
+    
+  
+
+  </div>
+
+</div>
+          
+          <div class="post-content markdown" itemprop="articleBody">
+            <div class="main-content-wrap">
+              <p>​    详情点我</p>
+
+<h1 id="一-注释掉properties配置文件中日志相关的配置">一、注释掉properties配置文件中日志相关的配置</h1>
+
+<pre><code class="language-properties">#mybatis日志
+#mybatis-plus.configuration.log-impl=org.apache.ibatis.logging.stdout.StdOutImpl
+
+#日志级别 常用级别 error-&gt; warn-&gt; info -&gt; debug 越往左边，信息越多，默认是 info
+#logging.level.root=info
+</code></pre>
+
+<h1 id="二-在resources目录下创建">二、在resources目录下创建</h1>
+
+<h1 id="logback-spring-xml-文件-名字不能改">logback-spring.xml 文件（名字不能改）</h1>
+
+<pre><code class="language-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;configuration  scan=&quot;true&quot; scanPeriod=&quot;10 seconds&quot;&gt;
+    &lt;!-- 日志级别从低到高分为TRACE &lt; DEBUG &lt; INFO &lt; WARN &lt; ERROR &lt; FATAL，如果设置为WARN，则低于WARN的信息都不会输出 --&gt;
+    &lt;!-- scan:当此属性设置为true时，配置文件如果发生改变，将会被重新加载，默认值为true --&gt;
+    &lt;!-- scanPeriod:设置监测配置文件是否有修改的时间间隔，如果没有给出时间单位，默认单位是毫秒。当scan为true时，此属性生效。默认的时间间隔为1分钟。 --&gt;
+    &lt;!-- debug:当此属性设置为true时，将打印出logback内部日志信息，实时查看logback运行状态。默认值为false。 --&gt;
+
+    &lt;contextName&gt;logback&lt;/contextName&gt;
+    &lt;!-- name的值是变量的名称，value的值时变量定义的值。通过定义的值会被插入到logger上下文中。定义变量后，可以使“${}”来使用变量。 --&gt;
+    &lt;property name=&quot;log.path&quot; value=&quot;E:/JA/log&quot; /&gt;
+
+    &lt;!-- 彩色日志 --&gt;
+    &lt;!-- 配置格式变量：CONSOLE_LOG_PATTERN 彩色日志格式 --&gt;
+    &lt;!-- magenta:洋红 --&gt;
+    &lt;!-- boldMagenta:粗红--&gt;
+    &lt;!-- cyan:青色 --&gt;
+    &lt;!-- white:白色 --&gt;
+    &lt;!-- magenta:洋红 --&gt;
+    &lt;property name=&quot;CONSOLE_LOG_PATTERN&quot;
+              value=&quot;%yellow(%date{yyyy-MM-dd HH:mm:ss}) |%highlight(%-5level) |%blue(%thread) |%blue(%file:%line) |%green(%logger) |%cyan(%msg%n)&quot;/&gt;
+
+
+    &lt;!--输出到控制台--&gt;
+    &lt;appender name=&quot;CONSOLE&quot; class=&quot;ch.qos.logback.core.ConsoleAppender&quot;&gt;
+        &lt;!--此日志appender是为开发使用，只配置最底级别，控制台输出的日志级别是大于或等于此级别的日志信息--&gt;
+        &lt;!-- 例如：如果此处配置了INFO级别，则后面其他位置即使配置了DEBUG级别的日志，也不会被输出 --&gt;
+        &lt;filter class=&quot;ch.qos.logback.classic.filter.ThresholdFilter&quot;&gt;
+            &lt;level&gt;INFO&lt;/level&gt;
+        &lt;/filter&gt;
+        &lt;encoder&gt;
+            &lt;Pattern&gt;${CONSOLE_LOG_PATTERN}&lt;/Pattern&gt;
+            &lt;!-- 设置字符集 --&gt;
+            &lt;charset&gt;UTF-8&lt;/charset&gt;
+        &lt;/encoder&gt;
+    &lt;/appender&gt;
+
+
+    &lt;!--输出到文件--&gt;
+
+    &lt;!-- 时间滚动输出 level为 INFO 日志 --&gt;
+    &lt;appender name=&quot;INFO_FILE&quot; class=&quot;ch.qos.logback.core.rolling.RollingFileAppender&quot;&gt;
+        &lt;!-- 正在记录的日志文件的路径及文件名 --&gt;
+        &lt;file&gt;${log.path}/log_info.log&lt;/file&gt;
+        &lt;!--日志文件输出格式--&gt;
+        &lt;encoder&gt;
+            &lt;pattern&gt;%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{50} - %msg%n&lt;/pattern&gt;
+            &lt;charset&gt;UTF-8&lt;/charset&gt;
+        &lt;/encoder&gt;
+        &lt;!-- 日志记录器的滚动策略，按日期，按大小记录 --&gt;
+        &lt;rollingPolicy class=&quot;ch.qos.logback.core.rolling.TimeBasedRollingPolicy&quot;&gt;
+            &lt;!-- 每天日志归档路径以及格式 --&gt;
+            &lt;fileNamePattern&gt;${log.path}/info/log-info-%d{yyyy-MM-dd}.%i.log&lt;/fileNamePattern&gt;
+            &lt;timeBasedFileNamingAndTriggeringPolicy class=&quot;ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP&quot;&gt;
+                &lt;maxFileSize&gt;100MB&lt;/maxFileSize&gt;
+            &lt;/timeBasedFileNamingAndTriggeringPolicy&gt;
+            &lt;!--日志文件保留天数--&gt;
+            &lt;maxHistory&gt;15&lt;/maxHistory&gt;
+        &lt;/rollingPolicy&gt;
+        &lt;!-- 此日志文件只记录info级别的 --&gt;
+        &lt;filter class=&quot;ch.qos.logback.classic.filter.LevelFilter&quot;&gt;
+            &lt;level&gt;INFO&lt;/level&gt;
+            &lt;onMatch&gt;ACCEPT&lt;/onMatch&gt;
+            &lt;onMismatch&gt;DENY&lt;/onMismatch&gt;
+        &lt;/filter&gt;
+    &lt;/appender&gt;
+
+    &lt;!-- 时间滚动输出 level为 WARN 日志 --&gt;
+    &lt;appender name=&quot;WARN_FILE&quot; class=&quot;ch.qos.logback.core.rolling.RollingFileAppender&quot;&gt;
+        &lt;!-- 正在记录的日志文件的路径及文件名 --&gt;
+        &lt;file&gt;${log.path}/log_warn.log&lt;/file&gt;
+        &lt;!--日志文件输出格式--&gt;
+        &lt;encoder&gt;
+            &lt;pattern&gt;%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{50} - %msg%n&lt;/pattern&gt;
+            &lt;charset&gt;UTF-8&lt;/charset&gt; &lt;!-- 此处设置字符集 --&gt;
+        &lt;/encoder&gt;
+        &lt;!-- 日志记录器的滚动策略，按日期，按大小记录 --&gt;
+        &lt;rollingPolicy class=&quot;ch.qos.logback.core.rolling.TimeBasedRollingPolicy&quot;&gt;
+            &lt;fileNamePattern&gt;${log.path}/warn/log-warn-%d{yyyy-MM-dd}.%i.log&lt;/fileNamePattern&gt;
+            &lt;timeBasedFileNamingAndTriggeringPolicy class=&quot;ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP&quot;&gt;
+                &lt;maxFileSize&gt;100MB&lt;/maxFileSize&gt;
+            &lt;/timeBasedFileNamingAndTriggeringPolicy&gt;
+            &lt;!--日志文件保留天数--&gt;
+            &lt;maxHistory&gt;15&lt;/maxHistory&gt;
+        &lt;/rollingPolicy&gt;
+        &lt;!-- 此日志文件只记录warn级别的 --&gt;
+        &lt;filter class=&quot;ch.qos.logback.classic.filter.LevelFilter&quot;&gt;
+            &lt;level&gt;warn&lt;/level&gt;
+            &lt;onMatch&gt;ACCEPT&lt;/onMatch&gt;
+            &lt;onMismatch&gt;DENY&lt;/onMismatch&gt;
+        &lt;/filter&gt;
+    &lt;/appender&gt;
+
+
+    &lt;!-- 时间滚动输出 level为 ERROR 日志 --&gt;
+    &lt;appender name=&quot;ERROR_FILE&quot; class=&quot;ch.qos.logback.core.rolling.RollingFileAppender&quot;&gt;
+        &lt;!-- 正在记录的日志文件的路径及文件名 --&gt;
+        &lt;file&gt;${log.path}/log_error.log&lt;/file&gt;
+        &lt;!--日志文件输出格式--&gt;
+        &lt;encoder&gt;
+            &lt;pattern&gt;%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{50} - %msg%n&lt;/pattern&gt;
+            &lt;charset&gt;UTF-8&lt;/charset&gt; &lt;!-- 此处设置字符集 --&gt;
+        &lt;/encoder&gt;
+        &lt;!-- 日志记录器的滚动策略，按日期，按大小记录 --&gt;
+        &lt;rollingPolicy class=&quot;ch.qos.logback.core.rolling.TimeBasedRollingPolicy&quot;&gt;
+            &lt;fileNamePattern&gt;${log.path}/error/log-error-%d{yyyy-MM-dd}.%i.log&lt;/fileNamePattern&gt;
+            &lt;timeBasedFileNamingAndTriggeringPolicy class=&quot;ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP&quot;&gt;
+                &lt;maxFileSize&gt;100MB&lt;/maxFileSize&gt;
+            &lt;/timeBasedFileNamingAndTriggeringPolicy&gt;
+            &lt;!--日志文件保留天数--&gt;
+            &lt;maxHistory&gt;15&lt;/maxHistory&gt;
+        &lt;/rollingPolicy&gt;
+        &lt;!-- 此日志文件只记录ERROR级别的 --&gt;
+        &lt;filter class=&quot;ch.qos.logback.classic.filter.LevelFilter&quot;&gt;
+            &lt;level&gt;ERROR&lt;/level&gt;
+            &lt;onMatch&gt;ACCEPT&lt;/onMatch&gt;
+            &lt;onMismatch&gt;DENY&lt;/onMismatch&gt;
+        &lt;/filter&gt;
+    &lt;/appender&gt;
+
+    &lt;!--
+        &lt;logger&gt;用来设置某一个包或者具体的某一个类的日志打印级别、以及指定&lt;appender&gt;。
+        &lt;logger&gt;仅有一个name属性，
+        一个可选的level和一个可选的addtivity属性。
+        name:用来指定受此logger约束的某一个包或者具体的某一个类。
+        level:用来设置打印级别，大小写无关：TRACE, DEBUG, INFO, WARN, ERROR, ALL 和 OFF，
+              如果未设置此属性，那么当前logger将会继承上级的级别。
+    --&gt;
+    &lt;!--
+        使用mybatis的时候，sql语句是debug下才会打印，而这里我们只配置了info，所以想要查看sql语句的话，有以下两种操作：
+        第一种把&lt;root level=&quot;INFO&quot;&gt;改成&lt;root level=&quot;DEBUG&quot;&gt;这样就会打印sql，不过这样日志那边会出现很多其他消息
+        第二种就是单独给mapper下目录配置DEBUG模式，代码如下，这样配置sql语句会打印，其他还是正常DEBUG级别：
+     --&gt;
+    &lt;!--开发环境:打印控制台--&gt;
+    &lt;springProfile name=&quot;dev&quot;&gt;
+        &lt;!--可以输出项目中的debug日志，包括mybatis的sql日志--&gt;
+        &lt;logger name=&quot;xyz.zhonger&quot; level=&quot;INFO&quot; /&gt;
+
+        &lt;!--
+            root节点是必选节点，用来指定最基础的日志输出级别，只有一个level属性
+            level:用来设置打印级别，大小写无关：TRACE, DEBUG, INFO, WARN, ERROR, ALL 和 OFF，默认是DEBUG
+            可以包含零个或多个appender元素。
+        --&gt;
+        &lt;root level=&quot;INFO&quot;&gt;
+            &lt;appender-ref ref=&quot;CONSOLE&quot; /&gt;
+            &lt;appender-ref ref=&quot;INFO_FILE&quot; /&gt;
+            &lt;appender-ref ref=&quot;WARN_FILE&quot; /&gt;
+            &lt;appender-ref ref=&quot;ERROR_FILE&quot; /&gt;
+        &lt;/root&gt;
+    &lt;/springProfile&gt;
+
+
+    &lt;!--生产环境:输出到文件--&gt;
+    &lt;springProfile name=&quot;pro&quot;&gt;
+
+        &lt;root level=&quot;INFO&quot;&gt;
+            &lt;appender-ref ref=&quot;CONSOLE&quot; /&gt;
+            &lt;appender-ref ref=&quot;DEBUG_FILE&quot; /&gt;
+            &lt;appender-ref ref=&quot;INFO_FILE&quot; /&gt;
+            &lt;appender-ref ref=&quot;ERROR_FILE&quot; /&gt;
+            &lt;appender-ref ref=&quot;WARN_FILE&quot; /&gt;
+        &lt;/root&gt;
+    &lt;/springProfile&gt;
+
+&lt;/configuration&gt;
+</code></pre>
+
+<h1 id="三-将简单的异常信息输出到文件-一行">三、将简单的异常信息输出到文件（一行）</h1>
+
+<h2 id="1-在自定义的异常处理类上加上注解-slf4j">1、 在自定义的异常处理类上加上注解 @Slf4j</h2>
+
+<h2 id="2-在异常处理方法中加上-log-error-e-getmessage-语句">2、在异常处理方法中加上 log.error(e.getMessage()); 语句</h2>
+
+<pre><code class="language-java">
+@ControllerAdvice
+@Slf4j   //把异常信息输出到文件
+public class GlobalExceptionHandler {
+
+    //其他异常......
+
+    //自定义异常
+    @ExceptionHandler(GuliException.class) // GuliException：自定义类
+    @ResponseBody //为了返回数据
+    public R error(GuliException e) { // R：自定义类
+
+        log.error(e.getMessage()); //把异常信息输出到文件
+
+        e.printStackTrace();
+        return R.error().code(e.getCode()).message(e.getMsg());
+    }
+
+}
+</code></pre>
+
+<h1 id="四-将异常信息输出到文件-详细">四、将异常信息输出到文件（详细）</h1>
+
+<h2 id="1-自定义工具类">1、自定义工具类</h2>
+
+<pre><code class="language-java">public class ExceptionUtil {
+
+    public static String getMessage(Exception e) {
+        StringWriter sw = null;
+        PrintWriter pw = null;
+        try {
+            sw = new StringWriter();
+            pw = new PrintWriter(sw);
+            //将出错的栈信息输出到 printWrite中
+            e.printStackTrace(pw);
+            pw.flush();
+            sw.flush();
+        } finally {
+            if (sw != null) {
+                try {
+                    sw.close();
+                } catch (IOException e1) {
+                    e1.printStackTrace();
+                }
+            }
+            if (pw != null) {
+                pw.close();
+            }
+        }
+        return sw.toString();
+    }
+}
+</code></pre>
+
+<h2 id="2-在自定义的异常处理类上加上注解-slf4j">2、在自定义的异常处理类上加上注解 @Slf4j</h2>
+
+<h2 id="3-在异常处理方法中加上log-error-exceptionutil-getmessage-e-语句">3、在异常处理方法中加上log.error(ExceptionUtil.getMessage(e)); 语句</h2>
+
+<pre><code class="language-java">
+@ControllerAdvice
+@Slf4j   //把异常信息输出到文件
+public class GlobalExceptionHandler {
+
+    //其他异常......
+
+    //自定义异常
+    @ExceptionHandler(GuliException.class) // GuliException：自定义类
+    @ResponseBody //为了返回数据
+    public R error(GuliException e) { // R：自定义类
+
+        log.error(ExceptionUtil.getMessage(e)); //把异常信息输出到文件
+
+        e.printStackTrace();
+        return R.error().code(e.getCode()).message(e.getMsg());
+    }
+
+}
+</code></pre>
+              
+            </div>
+          </div>
+          <div id="post-footer" class="post-footer main-content-wrap">
+            
+              
+                
+                
+                  <div class="post-footer-tags">
+                    <span class="text-color-light text-small">标签</span><br/>
+                    
+  <a class="tag tag--primary tag--small" href="https://zhonger.xyz/tags/java/">java</a>
+
+                  </div>
+                
+              
+            
+            <div class="post-actions-wrap">
+  
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://zhonger.xyz/2020/06/%E7%BB%9F%E4%B8%80%E7%89%B9%E5%AE%9A%E8%87%AA%E5%AE%9A%E4%B9%89%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/" data-tooltip="统一、特定、自定义异常处理">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">下一篇</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://zhonger.xyz/2020/03/vue%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0excel%E6%96%87%E4%BB%B6/" data-tooltip="vue文件上传(excel文件)">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">上一篇</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://zhonger.xyz/2020/05/%E6%97%A5%E5%BF%97%E8%BE%93%E5%87%BA%E5%88%B0%E6%96%87%E4%BB%B6logback%E5%B7%A5%E5%85%B7/">
+              <i class="fa fa-facebook-official"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://zhonger.xyz/2020/05/%E6%97%A5%E5%BF%97%E8%BE%93%E5%87%BA%E5%88%B0%E6%96%87%E4%BB%B6logback%E5%B7%A5%E5%85%B7/">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://zhonger.xyz/2020/05/%E6%97%A5%E5%BF%97%E8%BE%93%E5%87%BA%E5%88%B0%E6%96%87%E4%BB%B6logback%E5%B7%A5%E5%85%B7/">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  
+</div>
+
+            
+              
+                <div id="disqus_thread">
+  <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+              
+            
+          </div>
+        </article>
+        <footer id="footer" class="main-content-wrap">
+  <span class="copyrights">
+    &copy; 2021 zhonger. All Rights Reserved
+  </span>
+</footer>
+
+      </div>
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="5">
+        <div class="post-actions-wrap">
+  
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://zhonger.xyz/2020/06/%E7%BB%9F%E4%B8%80%E7%89%B9%E5%AE%9A%E8%87%AA%E5%AE%9A%E4%B9%89%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/" data-tooltip="统一、特定、自定义异常处理">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">下一篇</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://zhonger.xyz/2020/03/vue%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0excel%E6%96%87%E4%BB%B6/" data-tooltip="vue文件上传(excel文件)">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">上一篇</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://zhonger.xyz/2020/05/%E6%97%A5%E5%BF%97%E8%BE%93%E5%87%BA%E5%88%B0%E6%96%87%E4%BB%B6logback%E5%B7%A5%E5%85%B7/">
+              <i class="fa fa-facebook-official"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://zhonger.xyz/2020/05/%E6%97%A5%E5%BF%97%E8%BE%93%E5%87%BA%E5%88%B0%E6%96%87%E4%BB%B6logback%E5%B7%A5%E5%85%B7/">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://zhonger.xyz/2020/05/%E6%97%A5%E5%BF%97%E8%BE%93%E5%87%BA%E5%88%B0%E6%96%87%E4%BB%B6logback%E5%B7%A5%E5%85%B7/">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  
+</div>
+
+      </div>
+      <div id="share-options-bar" class="share-options-bar" data-behavior="5">
+  <i id="btn-close-shareoptions" class="fa fa-close"></i>
+  <ul class="share-options">
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fzhonger.xyz%2F2020%2F05%2F%25E6%2597%25A5%25E5%25BF%2597%25E8%25BE%2593%25E5%2587%25BA%25E5%2588%25B0%25E6%2596%2587%25E4%25BB%25B6logback%25E5%25B7%25A5%25E5%2585%25B7%2F">
+          <i class="fa fa-facebook-official"></i><span>分享到 Facebook</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fzhonger.xyz%2F2020%2F05%2F%25E6%2597%25A5%25E5%25BF%2597%25E8%25BE%2593%25E5%2587%25BA%25E5%2588%25B0%25E6%2596%2587%25E4%25BB%25B6logback%25E5%25B7%25A5%25E5%2585%25B7%2F">
+          <i class="fa fa-twitter"></i><span>分享到 Twitter</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https%3A%2F%2Fzhonger.xyz%2F2020%2F05%2F%25E6%2597%25A5%25E5%25BF%2597%25E8%25BE%2593%25E5%2587%25BA%25E5%2588%25B0%25E6%2596%2587%25E4%25BB%25B6logback%25E5%25B7%25A5%25E5%2585%25B7%2F">
+          <i class="fa fa-google-plus"></i><span>分享到 Google&#43;</span>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
+    </div>
+    
+    <div id="about">
+  <div id="about-card">
+    <div id="about-btn-close">
+      <i class="fa fa-remove"></i>
+    </div>
+    
+      <img id="about-card-picture" src="https://www.gravatar.com/avatar/a4bf5f5bec56803e6ed1c59e972e53a5?s=110" alt="作者的图片" />
+    
+    <h4 id="about-card-name">zhonger</h4>
+    
+      <div id="about-card-bio"><strong><em>java AND jp</em></strong></div>
+    
+    
+      <div id="about-card-job">
+        <i class="fa fa-briefcase"></i>
+        <br/>
+        After-end
+      </div>
+    
+    
+      <div id="about-card-location">
+        <i class="fa fa-map-marker"></i>
+        <br/>
+        China
+      </div>
+    
+  </div>
+</div>
+
+    
+
+    
+  
+    
+      <div id="cover" style="background-image:url('https://zhonger.xyz/images/cover.jpg');"></div>
+    
+  
+
+
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.7/js/jquery.fancybox.min.js" integrity="sha256-GEAnjcTqVP+vBp3SSc8bEDQqvWAZMiHyUSIorrWwH50=" crossorigin="anonymous"></script>
+
+
+<script src="https://zhonger.xyz/js/script-pcw6v3xilnxydl1vddzazdverrnn9ctynvnxgwho987mfyqkuylcb1nlt.min.js"></script>
+
+
+<script lang="javascript">
+window.onload = updateMinWidth;
+window.onresize = updateMinWidth;
+document.getElementById("sidebar").addEventListener("transitionend", updateMinWidth);
+function updateMinWidth() {
+  var sidebar = document.getElementById("sidebar");
+  var main = document.getElementById("main");
+  main.style.minWidth = "";
+  var w1 = getComputedStyle(main).getPropertyValue("min-width");
+  var w2 = getComputedStyle(sidebar).getPropertyValue("width");
+  var w3 = getComputedStyle(sidebar).getPropertyValue("left");
+  main.style.minWidth = `calc(${w1} - ${w2} - ${w3})`;
+}
+</script>
+
+<script>
+$(document).ready(function() {
+  hljs.configure({ classPrefix: '', useBR: false });
+  $('pre.code-highlight > code, pre > code').each(function(i, block) {
+    if (!$(this).hasClass('codeblock')) {
+      $(this).addClass('codeblock');
+    }
+    hljs.highlightBlock(block);
+  });
+});
+</script>
+
+
+  
+    
+      <script>
+        var disqus_config = function () {
+          this.page.url = 'https:\/\/zhonger.xyz\/2020\/05\/%E6%97%A5%E5%BF%97%E8%BE%93%E5%87%BA%E5%88%B0%E6%96%87%E4%BB%B6logback%E5%B7%A5%E5%85%B7\/';
+          
+            this.page.identifier = '\/2020\/05\/%E6%97%A5%E5%BF%97%E8%BE%93%E5%87%BA%E5%88%B0%E6%96%87%E4%BB%B6logback%E5%B7%A5%E5%85%B7\/'
+          
+        };
+        (function() {
+          
+          
+          if (window.location.hostname == "localhost") {
+            return;
+          }
+          var d = document, s = d.createElement('script');
+          var disqus_shortname = 'hugo-tranquilpeak-theme';
+          s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+        })();
+      </script>
+    
+  
+
+
+
+
+    
+  </body>
+</html>
+

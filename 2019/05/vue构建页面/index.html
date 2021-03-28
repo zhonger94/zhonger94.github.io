@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.55.6 with theme Tranquilpeak 0.4.8-BETA">
+<meta name="author" content="zhonger">
+<meta name="keywords" content="">
+<meta name="description" content="​    详情点我">
+
+
+<meta property="og:description" content="​    详情点我">
+<meta property="og:type" content="article">
+<meta property="og:title" content="vue构建页面">
+<meta name="twitter:title" content="vue构建页面">
+<meta property="og:url" content="https://zhonger.xyz/2019/05/vue%E6%9E%84%E5%BB%BA%E9%A1%B5%E9%9D%A2/">
+<meta property="twitter:url" content="https://zhonger.xyz/2019/05/vue%E6%9E%84%E5%BB%BA%E9%A1%B5%E9%9D%A2/">
+<meta property="og:site_name" content="zhonger-blog">
+<meta property="og:description" content="​    详情点我">
+<meta name="twitter:description" content="​    详情点我">
+<meta property="og:locale" content="zh-cn">
+
+  
+    <meta property="article:published_time" content="2019-05-12T00:00:00">
+  
+  
+    <meta property="article:modified_time" content="2019-05-12T00:00:00">
+  
+  
+  
+    
+      <meta property="article:section" content="tranquilpeak">
+    
+      <meta property="article:section" content="features">
+    
+  
+  
+    
+      <meta property="article:tag" content="java">
+    
+  
+
+
+<meta name="twitter:card" content="summary">
+
+
+
+
+
+
+
+  <meta property="og:image" content="//d1u9biwaxjngwg.cloudfront.net/cover-image-showcase/city-750.jpg">
+  <meta property="twitter:image" content="//d1u9biwaxjngwg.cloudfront.net/cover-image-showcase/city-750.jpg">
+
+
+  <meta property="og:image" content="//d1u9biwaxjngwg.cloudfront.net/cover-image-showcase/city.jpg">
+  <meta property="twitter:image" content="//d1u9biwaxjngwg.cloudfront.net/cover-image-showcase/city.jpg">
+
+
+
+
+  <meta property="og:image" content="https://www.gravatar.com/avatar/a4bf5f5bec56803e6ed1c59e972e53a5?s=640">
+  <meta property="twitter:image" content="https://www.gravatar.com/avatar/a4bf5f5bec56803e6ed1c59e972e53a5?s=640">
+
+
+    <title>vue构建页面</title>
+
+    <link rel="icon" href="https://zhonger.xyz/favicon.ico">
+    
+
+    
+
+    <link rel="canonical" href="https://zhonger.xyz/2019/05/vue%E6%9E%84%E5%BB%BA%E9%A1%B5%E9%9D%A2/">
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/jquery.fancybox.min.css" integrity="sha256-vuXZ9LGmmwtjqFX1F+EKin1ThZMub58gKULUyf0qECk=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/helpers/jquery.fancybox-thumbs.min.css" integrity="sha256-SEa4XYAHihTcEP1f5gARTB2K26Uk8PsndQYHQC1f4jU=" crossorigin="anonymous" />
+    
+    
+    <link rel="stylesheet" href="https://zhonger.xyz/css/style-twzjdbqhmnnacqs0pwwdzcdbt8yhv8giawvjqjmyfoqnvazl0dalmnhdkvp7.min.css" />
+    
+    
+
+    
+      
+    
+    
+  </head>
+
+  <body>
+    <div id="blog">
+      <header id="header" data-behavior="5">
+  <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+  <div class="header-title">
+    <a class="header-title-link" href="https://zhonger.xyz/">zhonger-blog</a>
+  </div>
+  
+    
+      <a class="header-right-picture "
+         href="https://zhonger.xyz/#about">
+    
+    
+    
+      
+        <img class="header-picture" src="https://www.gravatar.com/avatar/a4bf5f5bec56803e6ed1c59e972e53a5?s=90" alt="作者的图片" />
+      
+    
+    </a>
+  
+</header>
+
+      <nav id="sidebar" data-behavior="5">
+  <div class="sidebar-container">
+    
+      <div class="sidebar-profile">
+        <a href="https://zhonger.xyz/#about">
+          <img class="sidebar-profile-picture" src="https://www.gravatar.com/avatar/a4bf5f5bec56803e6ed1c59e972e53a5?s=110" alt="作者的图片" />
+        </a>
+        <h4 class="sidebar-profile-name">zhonger</h4>
+        
+          <h5 class="sidebar-profile-bio"><strong><em>java AND jp</em></strong></h5>
+        
+      </div>
+    
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://zhonger.xyz/">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-home"></i>
+      
+      <span class="sidebar-button-desc">首页</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://zhonger.xyz/categories">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-bookmark"></i>
+      
+      <span class="sidebar-button-desc">分类</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://zhonger.xyz/tags">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-tags"></i>
+      
+      <span class="sidebar-button-desc">标签</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://zhonger.xyz/archives">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-archive"></i>
+      
+      <span class="sidebar-button-desc">归档</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://zhonger.xyz/#about">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-question"></i>
+      
+      <span class="sidebar-button-desc">关于</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://github.com/zhonger94/" target="_blank" rel="noopener">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-github"></i>
+      
+      <span class="sidebar-button-desc">GitHub</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://stackoverflow.com/users/15389330/zhonger" target="_blank" rel="noopener">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-stack-overflow"></i>
+      
+      <span class="sidebar-button-desc">Stack Overflow</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://zhonger.xyz/index.xml">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-rss"></i>
+      
+      <span class="sidebar-button-desc">RSS</span>
+    </a>
+  </li>
+
+
+    </ul>
+  </div>
+</nav>
+
+      
+  <div class="post-header-cover
+              text-center
+              "
+       style="background-image:url('//d1u9biwaxjngwg.cloudfront.net/cover-image-showcase/city.jpg')"
+       data-behavior="5">
+    
+  </div>
+
+
+      <div id="main" data-behavior="5"
+        class="hasCover
+               hasCoverMetaOut
+               ">
+        <article class="post" itemscope itemType="http://schema.org/BlogPosting">
+          
+          
+            <div class="post-header main-content-wrap text-center">
+  
+    <h1 class="post-title" itemprop="headline">
+      vue构建页面
+    </h1>
+  
+  
+  <div class="postShorten-meta post-meta">
+    
+      <time itemprop="datePublished" datetime="2019-05-12T00:00:00Z">
+        
+  
+  
+  
+  
+    12 五月 2019
+  
+
+      </time>
+    
+    
+  
+  
+    <span>发布在</span>
+    
+      <a class="category-link" href="https://zhonger.xyz/categories/tranquilpeak">tranquilpeak</a>, 
+    
+      <a class="category-link" href="https://zhonger.xyz/categories/features">features</a>
+    
+  
+
+  </div>
+
+</div>
+          
+          <div class="post-content markdown" itemprop="articleBody">
+            <div class="main-content-wrap">
+              <p>​    详情点我</p>
+
+<h2 id="一-创建html页面-使用快捷键生成html代码">一、创建html页面，使用快捷键生成html代码</h2>
+
+<blockquote>
+<p>快捷键为：<strong>！</strong></p>
+</blockquote>
+
+<h2 id="二-引入vue的js文件-类似jquery">二、引入vue的js文件，类似jquery</h2>
+
+<blockquote>
+<p>① 把 vue的js文件<strong>复制</strong>到工程的<strong>磁盘</strong>目录</p>
+
+<p>② 引入</p>
+</blockquote>
+
+<pre><code class="language-html">&lt;script src=&quot;vue.min.js&quot;&gt;&lt;/script&gt;
+</code></pre>
+
+<h2 id="三-在html页面创建div标签-div添加idshux">三、在html页面创建div标签，div添加idshux</h2>
+
+<h2 id="四-编写vue代码-固定结构">四、编写vue代码 （固定结构）</h2>
+
+<h2 id="五-使用插值表达式-获取data-变量名-的值">五、使用插值表达式，获取data(变量名)的值</h2>
+
+<pre><code class="language-html">&lt;body&gt;
+    &lt;!-- 三 --&gt;
+    &lt;div id=&quot;app&quot;&gt;
+        &lt;!-- 五 {{}} 差值表达式，绑定vue中的data数据 --&gt;
+        {{message}} &lt;!-- vue对象中 data属性的变量名 --&gt;
+    &lt;/div&gt;
+
+    &lt;!-- 二 --&gt;
+    &lt;script src=&quot;vue.min.js&quot;&gt;&lt;/script&gt;
+    
+    &lt;!-- 四 --&gt;
+    &lt;script&gt;
+        //创建一个vue对象，固定写法
+        new Vue({
+            el:'#app',//绑定vue作用域，值为 div标签的id，固定写法
+            data:{
+                message:'hello vue!' //该行可以自定义
+            }
+        })
+    &lt;/script&gt;
+&lt;/body&gt;
+</code></pre>
+
+<h2 id="六-在vs-code中创建代码片段">六、在vs code中创建代码片段：</h2>
+
+<blockquote>
+<p>文件 =&gt;  首选项 =&gt; 用户代码片段 =&gt; 新建全局代码片段/或文件夹代码片段：</p>
+
+<p>vue-html.code-snippets     注意；vue可改变，其他固定</p>
+</blockquote>
+
+<p>​   <strong>注意：</strong></p>
+
+<p>​       制作代码片段的时候，字符串中如果包含文件中复制过来的“Tab”键的空格，要换成“空格键”的空格。</p>
+
+<pre><code class="language-html">{
+        &quot;vue htm&quot;: {
+            &quot;scope&quot;: &quot;html&quot;,
+            &quot;prefix&quot;: &quot;vuehtml&quot;,
+            &quot;body&quot;: [
+                &quot;&lt;!DOCTYPE html&gt;&quot;,
+                &quot;&lt;html lang=\&quot;en\&quot;&gt;&quot;,
+                &quot;&quot;,
+                &quot;&lt;head&gt;&quot;,
+                &quot;    &lt;meta charset=\&quot;UTF-8\&quot;&gt;&quot;,
+                &quot;    &lt;meta name=\&quot;viewport\&quot; content=\&quot;width=device-width, initial-scale=1.0\&quot;&gt;&quot;,
+                &quot;    &lt;meta http-equiv=\&quot;X-UA-Compatible\&quot; content=\&quot;ie=edge\&quot;&gt;&quot;,
+                &quot;    &lt;title&gt;Document&lt;/title&gt;&quot;,
+                &quot;&lt;/head&gt;&quot;,
+                &quot;&quot;,
+                &quot;&lt;body&gt;&quot;,
+                &quot;    &lt;div id=\&quot;app\&quot;&gt;&quot;,
+                &quot;&quot;,
+                &quot;    &lt;/div&gt;&quot;,
+                &quot;    &lt;script src=\&quot;vue.min.js\&quot;&gt;&lt;/script&gt;&quot;,
+                &quot;    &lt;script&gt;&quot;,
+                &quot;        new Vue({&quot;,
+                &quot;            el: '#app',&quot;,
+                &quot;            data: {&quot;,
+                &quot;                $1&quot;,
+                &quot;            }&quot;,
+                &quot;        })&quot;,
+                &quot;    &lt;/script&gt;&quot;,
+                &quot;&lt;/body&gt;&quot;,
+                &quot;&quot;,
+                &quot;&lt;/html&gt;&quot;,
+            ],
+            &quot;description&quot;: &quot;my vue template in html&quot;
+        }
+    }
+</code></pre>
+
+<p><strong>使用方法；</strong></p>
+
+<blockquote>
+<p>​ 在html文件中输入：vue htm，回车即可</p>
+</blockquote>
+              
+            </div>
+          </div>
+          <div id="post-footer" class="post-footer main-content-wrap">
+            
+              
+                
+                
+                  <div class="post-footer-tags">
+                    <span class="text-color-light text-small">标签</span><br/>
+                    
+  <a class="tag tag--primary tag--small" href="https://zhonger.xyz/tags/java/">java</a>
+
+                  </div>
+                
+              
+            
+            <div class="post-actions-wrap">
+  
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://zhonger.xyz/2019/05/i-%E8%B7%9F-i/" data-tooltip="i&#43;&#43; 跟&#43;&#43;i">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">下一篇</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://zhonger.xyz/2019/04/%E5%88%86%E9%A1%B5%E5%B8%A6%E6%9D%A1%E4%BB%B6%E6%9F%A5%E8%AF%A2/" data-tooltip="分页带条件查询">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">上一篇</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://zhonger.xyz/2019/05/vue%E6%9E%84%E5%BB%BA%E9%A1%B5%E9%9D%A2/">
+              <i class="fa fa-facebook-official"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://zhonger.xyz/2019/05/vue%E6%9E%84%E5%BB%BA%E9%A1%B5%E9%9D%A2/">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://zhonger.xyz/2019/05/vue%E6%9E%84%E5%BB%BA%E9%A1%B5%E9%9D%A2/">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  
+</div>
+
+            
+              
+                <div id="disqus_thread">
+  <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+              
+            
+          </div>
+        </article>
+        <footer id="footer" class="main-content-wrap">
+  <span class="copyrights">
+    &copy; 2021 zhonger. All Rights Reserved
+  </span>
+</footer>
+
+      </div>
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="5">
+        <div class="post-actions-wrap">
+  
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://zhonger.xyz/2019/05/i-%E8%B7%9F-i/" data-tooltip="i&#43;&#43; 跟&#43;&#43;i">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">下一篇</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://zhonger.xyz/2019/04/%E5%88%86%E9%A1%B5%E5%B8%A6%E6%9D%A1%E4%BB%B6%E6%9F%A5%E8%AF%A2/" data-tooltip="分页带条件查询">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">上一篇</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://zhonger.xyz/2019/05/vue%E6%9E%84%E5%BB%BA%E9%A1%B5%E9%9D%A2/">
+              <i class="fa fa-facebook-official"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://zhonger.xyz/2019/05/vue%E6%9E%84%E5%BB%BA%E9%A1%B5%E9%9D%A2/">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://zhonger.xyz/2019/05/vue%E6%9E%84%E5%BB%BA%E9%A1%B5%E9%9D%A2/">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  
+</div>
+
+      </div>
+      <div id="share-options-bar" class="share-options-bar" data-behavior="5">
+  <i id="btn-close-shareoptions" class="fa fa-close"></i>
+  <ul class="share-options">
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fzhonger.xyz%2F2019%2F05%2Fvue%25E6%259E%2584%25E5%25BB%25BA%25E9%25A1%25B5%25E9%259D%25A2%2F">
+          <i class="fa fa-facebook-official"></i><span>分享到 Facebook</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fzhonger.xyz%2F2019%2F05%2Fvue%25E6%259E%2584%25E5%25BB%25BA%25E9%25A1%25B5%25E9%259D%25A2%2F">
+          <i class="fa fa-twitter"></i><span>分享到 Twitter</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https%3A%2F%2Fzhonger.xyz%2F2019%2F05%2Fvue%25E6%259E%2584%25E5%25BB%25BA%25E9%25A1%25B5%25E9%259D%25A2%2F">
+          <i class="fa fa-google-plus"></i><span>分享到 Google&#43;</span>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
+    </div>
+    
+    <div id="about">
+  <div id="about-card">
+    <div id="about-btn-close">
+      <i class="fa fa-remove"></i>
+    </div>
+    
+      <img id="about-card-picture" src="https://www.gravatar.com/avatar/a4bf5f5bec56803e6ed1c59e972e53a5?s=110" alt="作者的图片" />
+    
+    <h4 id="about-card-name">zhonger</h4>
+    
+      <div id="about-card-bio"><strong><em>java AND jp</em></strong></div>
+    
+    
+      <div id="about-card-job">
+        <i class="fa fa-briefcase"></i>
+        <br/>
+        After-end
+      </div>
+    
+    
+      <div id="about-card-location">
+        <i class="fa fa-map-marker"></i>
+        <br/>
+        China
+      </div>
+    
+  </div>
+</div>
+
+    
+
+    
+  
+    
+      <div id="cover" style="background-image:url('https://zhonger.xyz/images/cover.jpg');"></div>
+    
+  
+
+
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.7/js/jquery.fancybox.min.js" integrity="sha256-GEAnjcTqVP+vBp3SSc8bEDQqvWAZMiHyUSIorrWwH50=" crossorigin="anonymous"></script>
+
+
+<script src="https://zhonger.xyz/js/script-pcw6v3xilnxydl1vddzazdverrnn9ctynvnxgwho987mfyqkuylcb1nlt.min.js"></script>
+
+
+<script lang="javascript">
+window.onload = updateMinWidth;
+window.onresize = updateMinWidth;
+document.getElementById("sidebar").addEventListener("transitionend", updateMinWidth);
+function updateMinWidth() {
+  var sidebar = document.getElementById("sidebar");
+  var main = document.getElementById("main");
+  main.style.minWidth = "";
+  var w1 = getComputedStyle(main).getPropertyValue("min-width");
+  var w2 = getComputedStyle(sidebar).getPropertyValue("width");
+  var w3 = getComputedStyle(sidebar).getPropertyValue("left");
+  main.style.minWidth = `calc(${w1} - ${w2} - ${w3})`;
+}
+</script>
+
+<script>
+$(document).ready(function() {
+  hljs.configure({ classPrefix: '', useBR: false });
+  $('pre.code-highlight > code, pre > code').each(function(i, block) {
+    if (!$(this).hasClass('codeblock')) {
+      $(this).addClass('codeblock');
+    }
+    hljs.highlightBlock(block);
+  });
+});
+</script>
+
+
+  
+    
+      <script>
+        var disqus_config = function () {
+          this.page.url = 'https:\/\/zhonger.xyz\/2019\/05\/vue%E6%9E%84%E5%BB%BA%E9%A1%B5%E9%9D%A2\/';
+          
+            this.page.identifier = '\/2019\/05\/vue%E6%9E%84%E5%BB%BA%E9%A1%B5%E9%9D%A2\/'
+          
+        };
+        (function() {
+          
+          
+          if (window.location.hostname == "localhost") {
+            return;
+          }
+          var d = document, s = d.createElement('script');
+          var disqus_shortname = 'hugo-tranquilpeak-theme';
+          s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+        })();
+      </script>
+    
+  
+
+
+
+
+    
+  </body>
+</html>
+

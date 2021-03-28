@@ -1,0 +1,864 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.55.6 with theme Tranquilpeak 0.4.8-BETA">
+<meta name="author" content="zhonger">
+<meta name="keywords" content="">
+<meta name="description" content="​    详情点我">
+
+
+<meta property="og:description" content="​    详情点我">
+<meta property="og:type" content="article">
+<meta property="og:title" content="阿里云视频点播">
+<meta name="twitter:title" content="阿里云视频点播">
+<meta property="og:url" content="https://zhonger.xyz/2019/04/%E9%98%BF%E9%87%8C%E4%BA%91%E8%A7%86%E9%A2%91%E7%82%B9%E6%92%AD/">
+<meta property="twitter:url" content="https://zhonger.xyz/2019/04/%E9%98%BF%E9%87%8C%E4%BA%91%E8%A7%86%E9%A2%91%E7%82%B9%E6%92%AD/">
+<meta property="og:site_name" content="zhonger-blog">
+<meta property="og:description" content="​    详情点我">
+<meta name="twitter:description" content="​    详情点我">
+<meta property="og:locale" content="zh-cn">
+
+  
+    <meta property="article:published_time" content="2019-04-20T00:00:00">
+  
+  
+    <meta property="article:modified_time" content="2019-04-20T00:00:00">
+  
+  
+  
+    
+      <meta property="article:section" content="tranquilpeak">
+    
+      <meta property="article:section" content="features">
+    
+  
+  
+    
+      <meta property="article:tag" content="java">
+    
+  
+
+
+<meta name="twitter:card" content="summary">
+
+
+
+
+
+
+
+  <meta property="og:image" content="//d1u9biwaxjngwg.cloudfront.net/cover-image-showcase/city-750.jpg">
+  <meta property="twitter:image" content="//d1u9biwaxjngwg.cloudfront.net/cover-image-showcase/city-750.jpg">
+
+
+  <meta property="og:image" content="//d1u9biwaxjngwg.cloudfront.net/cover-image-showcase/city.jpg">
+  <meta property="twitter:image" content="//d1u9biwaxjngwg.cloudfront.net/cover-image-showcase/city.jpg">
+
+
+
+
+  <meta property="og:image" content="https://www.gravatar.com/avatar/a4bf5f5bec56803e6ed1c59e972e53a5?s=640">
+  <meta property="twitter:image" content="https://www.gravatar.com/avatar/a4bf5f5bec56803e6ed1c59e972e53a5?s=640">
+
+
+    <title>阿里云视频点播</title>
+
+    <link rel="icon" href="https://zhonger.xyz/favicon.ico">
+    
+
+    
+
+    <link rel="canonical" href="https://zhonger.xyz/2019/04/%E9%98%BF%E9%87%8C%E4%BA%91%E8%A7%86%E9%A2%91%E7%82%B9%E6%92%AD/">
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/jquery.fancybox.min.css" integrity="sha256-vuXZ9LGmmwtjqFX1F+EKin1ThZMub58gKULUyf0qECk=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/helpers/jquery.fancybox-thumbs.min.css" integrity="sha256-SEa4XYAHihTcEP1f5gARTB2K26Uk8PsndQYHQC1f4jU=" crossorigin="anonymous" />
+    
+    
+    <link rel="stylesheet" href="https://zhonger.xyz/css/style-twzjdbqhmnnacqs0pwwdzcdbt8yhv8giawvjqjmyfoqnvazl0dalmnhdkvp7.min.css" />
+    
+    
+
+    
+      
+    
+    
+  </head>
+
+  <body>
+    <div id="blog">
+      <header id="header" data-behavior="5">
+  <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+  <div class="header-title">
+    <a class="header-title-link" href="https://zhonger.xyz/">zhonger-blog</a>
+  </div>
+  
+    
+      <a class="header-right-picture "
+         href="https://zhonger.xyz/#about">
+    
+    
+    
+      
+        <img class="header-picture" src="https://www.gravatar.com/avatar/a4bf5f5bec56803e6ed1c59e972e53a5?s=90" alt="作者的图片" />
+      
+    
+    </a>
+  
+</header>
+
+      <nav id="sidebar" data-behavior="5">
+  <div class="sidebar-container">
+    
+      <div class="sidebar-profile">
+        <a href="https://zhonger.xyz/#about">
+          <img class="sidebar-profile-picture" src="https://www.gravatar.com/avatar/a4bf5f5bec56803e6ed1c59e972e53a5?s=110" alt="作者的图片" />
+        </a>
+        <h4 class="sidebar-profile-name">zhonger</h4>
+        
+          <h5 class="sidebar-profile-bio"><strong><em>java AND jp</em></strong></h5>
+        
+      </div>
+    
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://zhonger.xyz/">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-home"></i>
+      
+      <span class="sidebar-button-desc">首页</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://zhonger.xyz/categories">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-bookmark"></i>
+      
+      <span class="sidebar-button-desc">分类</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://zhonger.xyz/tags">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-tags"></i>
+      
+      <span class="sidebar-button-desc">标签</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://zhonger.xyz/archives">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-archive"></i>
+      
+      <span class="sidebar-button-desc">归档</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://zhonger.xyz/#about">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-question"></i>
+      
+      <span class="sidebar-button-desc">关于</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://github.com/zhonger94/" target="_blank" rel="noopener">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-github"></i>
+      
+      <span class="sidebar-button-desc">GitHub</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://stackoverflow.com/users/15389330/zhonger" target="_blank" rel="noopener">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-stack-overflow"></i>
+      
+      <span class="sidebar-button-desc">Stack Overflow</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://zhonger.xyz/index.xml">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-rss"></i>
+      
+      <span class="sidebar-button-desc">RSS</span>
+    </a>
+  </li>
+
+
+    </ul>
+  </div>
+</nav>
+
+      
+  <div class="post-header-cover
+              text-center
+              "
+       style="background-image:url('//d1u9biwaxjngwg.cloudfront.net/cover-image-showcase/city.jpg')"
+       data-behavior="5">
+    
+  </div>
+
+
+      <div id="main" data-behavior="5"
+        class="hasCover
+               hasCoverMetaOut
+               ">
+        <article class="post" itemscope itemType="http://schema.org/BlogPosting">
+          
+          
+            <div class="post-header main-content-wrap text-center">
+  
+    <h1 class="post-title" itemprop="headline">
+      阿里云视频点播
+    </h1>
+  
+  
+  <div class="postShorten-meta post-meta">
+    
+      <time itemprop="datePublished" datetime="2019-04-20T00:00:00Z">
+        
+  
+  
+  
+  
+    20 四月 2019
+  
+
+      </time>
+    
+    
+  
+  
+    <span>发布在</span>
+    
+      <a class="category-link" href="https://zhonger.xyz/categories/tranquilpeak">tranquilpeak</a>, 
+    
+      <a class="category-link" href="https://zhonger.xyz/categories/features">features</a>
+    
+  
+
+  </div>
+
+</div>
+          
+          <div class="post-content markdown" itemprop="articleBody">
+            <div class="main-content-wrap">
+              <p>​    详情点我</p>
+
+<h3 id="仓库-可忽略">仓库（可忽略）</h3>
+
+<pre><code class="language-java">    &lt;repositories&gt;
+      &lt;repository&gt;
+        &lt;id&gt;sonatype-nexus-staging&lt;/id&gt;
+        &lt;name&gt;Sonatype Nexus Staging&lt;/name&gt;
+        &lt;url&gt;https://oss.sonatype.org/service/local/staging/deploy/maven2/&lt;/url&gt;
+        &lt;releases&gt;
+            &lt;enabled&gt;true&lt;/enabled&gt;
+        &lt;/releases&gt;
+        &lt;snapshots&gt;
+            &lt;enabled&gt;true&lt;/enabled&gt;
+        &lt;/snapshots&gt;
+      &lt;/repository&gt;
+    &lt;/repositories&gt;
+</code></pre>
+
+<h3 id="依赖">依赖</h3>
+
+<pre><code class="language-xml">  &lt;dependencies&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;com.aliyun&lt;/groupId&gt;
+            &lt;artifactId&gt;aliyun-java-sdk-core&lt;/artifactId&gt;
+            &lt;version&gt;4.3.3&lt;/version&gt;
+        &lt;/dependency&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;com.aliyun.oss&lt;/groupId&gt;
+            &lt;artifactId&gt;aliyun-sdk-oss&lt;/artifactId&gt;
+            &lt;version&gt;3.1.0&lt;/version&gt;
+        &lt;/dependency&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;com.aliyun&lt;/groupId&gt;
+            &lt;artifactId&gt;aliyun-java-sdk-vod&lt;/artifactId&gt;
+            &lt;version&gt;2.15.2&lt;/version&gt;
+        &lt;/dependency&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;com.aliyun&lt;/groupId&gt;
+            &lt;artifactId&gt;aliyun-sdk-vod-upload&lt;/artifactId&gt;
+            &lt;version&gt;1.4.11&lt;/version&gt;
+        &lt;/dependency&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;com.alibaba&lt;/groupId&gt;
+            &lt;artifactId&gt;fastjson&lt;/artifactId&gt;
+            &lt;version&gt;1.2.28&lt;/version&gt;
+        &lt;/dependency&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;org.json&lt;/groupId&gt;
+            &lt;artifactId&gt;json&lt;/artifactId&gt;
+            &lt;version&gt;20170516&lt;/version&gt;
+        &lt;/dependency&gt;
+        &lt;dependency&gt;
+            &lt;groupId&gt;com.google.code.gson&lt;/groupId&gt;
+            &lt;artifactId&gt;gson&lt;/artifactId&gt;
+            &lt;version&gt;2.8.2&lt;/version&gt;
+        &lt;/dependency&gt;
+
+        &lt;dependency&gt;
+            &lt;groupId&gt;joda-time&lt;/groupId&gt;
+            &lt;artifactId&gt;joda-time&lt;/artifactId&gt;
+            &lt;version&gt;2.10.1&lt;/version&gt;
+        &lt;/dependency&gt;
+    &lt;/dependencies&gt;
+</code></pre>
+
+<h3 id="application-properties-文件">application.properties 文件</h3>
+
+<pre><code class="language-properties"># 服务端口
+server.port=8003
+# 服务名
+spring.application.name=service-vod
+
+# 环境设置：dev、test、prod
+spring.profiles.active=dev
+
+#阿里云 vod
+#不同的服务器，地址不同
+aliyun.vod.file.keyid=LTAI5tRngiSMFYogKq3MX5vL
+aliyun.vod.file.keysecret=Tyi3RZXsOiLoyzEGH7l8P47zAAOEvy
+
+# 最大上传单个文件大小：默认1M
+spring.servlet.multipart.max-file-size=1024MB
+# 最大置总上传的数据大小 ：默认10M
+spring.servlet.multipart.max-request-size=1024MB
+</code></pre>
+
+<h3 id="启动类">启动类</h3>
+
+<pre><code class="language-java">@SpringBootApplication(exclude = {DataSourceAutoConfiguration.class})
+public class ServiceOssMain8002 {
+
+    public static void main(String[] args) {
+        SpringApplication.run(ServiceOssMain8002.class, args);
+    }
+}
+</code></pre>
+
+<h3 id="工具类-记得加上-component">工具类 （记得加上 @Component）</h3>
+
+<pre><code class="language-java">//当项目已启动，spring接口，spring加载之后，执行接口一个方法
+@Component //把该类交给spring管理
+public class ConstantUtils implements InitializingBean {
+
+    @Value(&quot;${aliyun.vod.file.keyid}&quot;)
+    private String keyId;
+    @Value(&quot;${aliyun.vod.file.keysecret}&quot;)
+    private String keySecret;
+
+    //定义公开静态常量
+    public static String ACCESS_KEY_ID;
+    public static String ACCESS_KEY_SECRET;
+
+    @Override
+    public void afterPropertiesSet() throws Exception {
+        ACCESS_KEY_ID = keyId;
+        ACCESS_KEY_SECRET = keySecret;
+    }
+}
+</code></pre>
+
+<h3 id="controller层">controller层</h3>
+
+<pre><code class="language-java">@RestController
+@RequestMapping(&quot;/eduvod/video&quot;)
+@CrossOrigin //解决跨域
+public class VodController {
+
+    @Autowired
+    private VodService vodService;
+
+    @ApiOperation(&quot;上传文件到阿里云&quot;)
+    @PostMapping(&quot;uploadVideo&quot;)
+    public R uploadFile(MultipartFile file) {
+        //返回视频ID
+        String videoId = vodService.uploadFile(file);
+        return R.ok().data(&quot;videoId&quot;,videoId);
+    }
+    
+    
+    //该方法额外需要初始化类 
+      @ApiOperation(&quot;删除阿里云的视频&quot;)
+    @DeleteMapping(&quot;removeAlyVideo/{id}&quot;)
+    public R removeAlyVideo(@PathVariable String id) {
+
+        try {
+            //初始化
+            DefaultAcsClient client = InitVodClient.initVodClient(ConstantUtils.ACCESS_KEY_ID, ConstantUtils.ACCESS_KEY_SECRET);
+            //创建删除视频的request对象
+            DeleteVideoRequest request = new DeleteVideoRequest();
+            //向 request设置视频 id,可以批量删除，id直接用 , 隔开即可
+            request.setVideoIds(id);
+            //调用初始化对象的方法实现删除
+            client.getAcsResponse(request);
+            return R.ok();
+        } catch (Exception e) {
+            e.printStackTrace();
+            throw new GuliException(20001, &quot;删除视频失败&quot;);
+        }
+    }
+    
+    
+    //批量删除阿里云的视频
+    @ApiOperation(&quot;批量删除阿里云视频&quot;)
+    @DeleteMapping(&quot;removeVideoBatch&quot;)
+    public R removeVideoBatch(@RequestParam List VideoListId) {
+         try {
+            //初始化
+            DefaultAcsClient client = InitVodClient.initVodClient(ConstantUtils.ACCESS_KEY_ID, ConstantUtils.ACCESS_KEY_SECRET);
+            //创建删除视频的request对象
+            DeleteVideoRequest request = new DeleteVideoRequest();
+
+            //使用的是 org.apache.commons.lang.StringUtils
+            String videoIds = StringUtils.join(videoListId.toArray(), &quot;,&quot;);
+
+            //向 request设置视频 id,可以批量删除，id直接用 , 隔开即可
+            request.setVideoIds(videoIds);
+            //调用初始化对象的方法实现删除
+            client.getAcsResponse(request);
+             return R.ok();
+        } catch (Exception e) {
+            e.printStackTrace();
+            throw new GuliException(20001, &quot;删除视频失败&quot;);
+        }
+        
+    }
+}
+</code></pre>
+
+<h3 id="service层">service层</h3>
+
+<pre><code class="language-java">  public String uploadFile(MultipartFile file) {
+
+        try {
+            //fileName:上传文件的名称
+            String fileName = file.getOriginalFilename();
+            //title：上传之后显示的视频名称，去掉后缀名  xxx.mp4 =&gt; xxx
+            String title = fileName.substring(0, fileName.lastIndexOf(&quot;.&quot;));
+            //inputStream
+            InputStream inputStream = file.getInputStream();
+            UploadStreamRequest request = new UploadStreamRequest(ConstantUtils.ACCESS_KEY_ID, ConstantUtils.ACCESS_KEY_SECRET, title, fileName, inputStream);
+
+            UploadVideoImpl uploader = new UploadVideoImpl();
+            UploadStreamResponse response = uploader.uploadStream(request);
+
+            String videoId = null;
+            if (response.isSuccess()) {
+                videoId = response.getVideoId() ;
+            } else { //如果设置回调URL无效，不影响视频上传，可以返回VideoId同时会返回错误码。其他情况上传失败时，VideoId为空，此时需要根据返回错误码分析具体错误原因
+                videoId = response.getVideoId();
+            }
+            return videoId;
+        } catch (IOException e) {
+            e.printStackTrace();
+            throw new GuliException(20001, &quot;上传失败&quot;);//自定义异常
+        }
+    }
+</code></pre>
+
+<h4 id="初始化类-删除方法所需要">初始化类 （删除方法所需要）</h4>
+
+<pre><code class="language-java">
+import com.aliyun.oss.ClientException;
+import com.aliyuncs.DefaultAcsClient;
+import com.aliyuncs.profile.DefaultProfile;
+
+public class InitVodClient {
+
+    public static DefaultAcsClient initVodClient(String accessKeyId, String accessKeySecret) throws ClientException {
+        String regionId = &quot;cn-shanghai&quot;;  // 点播服务接入区域,固定不能修改
+        DefaultProfile profile = DefaultProfile.getProfile(regionId, accessKeyId, accessKeySecret);
+        DefaultAcsClient client = new DefaultAcsClient(profile);
+        return client;
+    }
+}
+</code></pre>
+
+<h4 id="其他方法">其他方法</h4>
+
+<pre><code class="language-java">  // ② 根据视频iD获取视频播放凭证
+    public static void getPlayAuth() throws Exception{
+
+        DefaultAcsClient client = InitObject.initVodClient(&quot;LTAI5tRngiSMFYogKq3MX5vL&quot;, &quot;Tyi3RZXsOiLoyzEGH7l8P47zAAOEvy&quot;);
+
+        GetVideoPlayAuthRequest request = new GetVideoPlayAuthRequest();
+        GetVideoPlayAuthResponse response = new GetVideoPlayAuthResponse();
+
+        request.setVideoId(&quot;53ac7913793e492d80a67b06a539b97f&quot;);
+
+        response = client.getAcsResponse(request);
+        System.out.println(&quot;playAuth:&quot;+response.getPlayAuth());
+    }
+
+    // ③ 根据视频iD获取视频播放地址
+    public static void getPlayUrl() throws Exception{
+        //创建初始化对象
+        DefaultAcsClient client = InitObject.initVodClient(&quot;LTAI5tRngiSMFYogKq3MX5vL&quot;, &quot;Tyi3RZXsOiLoyzEGH7l8P47zAAOEvy&quot;);
+
+        //创建获取视频地址request和response
+        GetPlayInfoRequest request = new GetPlayInfoRequest();
+        GetPlayInfoResponse response = new GetPlayInfoResponse();
+
+        //向request对象里面设置视频id
+        request.setVideoId(&quot;53ac7913793e492d80a67b06a539b97f&quot;);
+
+        //调用初始化对象里面的方法，传递request，获取数据
+        response = client.getAcsResponse(request);
+
+        List&lt;GetPlayInfoResponse.PlayInfo&gt; playInfoList = response.getPlayInfoList();
+        //播放地址
+        for (GetPlayInfoResponse.PlayInfo playInfo : playInfoList) {
+            System.out.print(&quot;PlayInfo.PlayURL = &quot; + playInfo.getPlayURL() + &quot;\n&quot;);
+        }
+        //Base信息
+        System.out.print(&quot;VideoBase.Title = &quot; + response.getVideoBase().getTitle() + &quot;\n&quot;);
+    }
+</code></pre>
+              
+            </div>
+          </div>
+          <div id="post-footer" class="post-footer main-content-wrap">
+            
+              
+                
+                
+                  <div class="post-footer-tags">
+                    <span class="text-color-light text-small">标签</span><br/>
+                    
+  <a class="tag tag--primary tag--small" href="https://zhonger.xyz/tags/java/">java</a>
+
+                  </div>
+                
+              
+            
+            <div class="post-actions-wrap">
+  
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://zhonger.xyz/2019/04/%E5%88%86%E9%A1%B5%E5%B8%A6%E6%9D%A1%E4%BB%B6%E6%9F%A5%E8%AF%A2/" data-tooltip="分页带条件查询">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">下一篇</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://zhonger.xyz/2019/03/springcloud-nacos%E7%AD%89%E9%85%8D%E7%BD%AE/" data-tooltip="SpringCloud-nacos等配置">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">上一篇</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://zhonger.xyz/2019/04/%E9%98%BF%E9%87%8C%E4%BA%91%E8%A7%86%E9%A2%91%E7%82%B9%E6%92%AD/">
+              <i class="fa fa-facebook-official"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://zhonger.xyz/2019/04/%E9%98%BF%E9%87%8C%E4%BA%91%E8%A7%86%E9%A2%91%E7%82%B9%E6%92%AD/">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://zhonger.xyz/2019/04/%E9%98%BF%E9%87%8C%E4%BA%91%E8%A7%86%E9%A2%91%E7%82%B9%E6%92%AD/">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  
+</div>
+
+            
+              
+                <div id="disqus_thread">
+  <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+              
+            
+          </div>
+        </article>
+        <footer id="footer" class="main-content-wrap">
+  <span class="copyrights">
+    &copy; 2021 zhonger. All Rights Reserved
+  </span>
+</footer>
+
+      </div>
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="5">
+        <div class="post-actions-wrap">
+  
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://zhonger.xyz/2019/04/%E5%88%86%E9%A1%B5%E5%B8%A6%E6%9D%A1%E4%BB%B6%E6%9F%A5%E8%AF%A2/" data-tooltip="分页带条件查询">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">下一篇</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://zhonger.xyz/2019/03/springcloud-nacos%E7%AD%89%E9%85%8D%E7%BD%AE/" data-tooltip="SpringCloud-nacos等配置">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">上一篇</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https://zhonger.xyz/2019/04/%E9%98%BF%E9%87%8C%E4%BA%91%E8%A7%86%E9%A2%91%E7%82%B9%E6%92%AD/">
+              <i class="fa fa-facebook-official"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=https://zhonger.xyz/2019/04/%E9%98%BF%E9%87%8C%E4%BA%91%E8%A7%86%E9%A2%91%E7%82%B9%E6%92%AD/">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+        
+          <li class="post-action hide-xs">
+            <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=https://zhonger.xyz/2019/04/%E9%98%BF%E9%87%8C%E4%BA%91%E8%A7%86%E9%A2%91%E7%82%B9%E6%92%AD/">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  
+</div>
+
+      </div>
+      <div id="share-options-bar" class="share-options-bar" data-behavior="5">
+  <i id="btn-close-shareoptions" class="fa fa-close"></i>
+  <ul class="share-options">
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fzhonger.xyz%2F2019%2F04%2F%25E9%2598%25BF%25E9%2587%258C%25E4%25BA%2591%25E8%25A7%2586%25E9%25A2%2591%25E7%2582%25B9%25E6%2592%25AD%2F">
+          <i class="fa fa-facebook-official"></i><span>分享到 Facebook</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=https%3A%2F%2Fzhonger.xyz%2F2019%2F04%2F%25E9%2598%25BF%25E9%2587%258C%25E4%25BA%2591%25E8%25A7%2586%25E9%25A2%2591%25E7%2582%25B9%25E6%2592%25AD%2F">
+          <i class="fa fa-twitter"></i><span>分享到 Twitter</span>
+        </a>
+      </li>
+    
+      <li class="share-option">
+        <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=https%3A%2F%2Fzhonger.xyz%2F2019%2F04%2F%25E9%2598%25BF%25E9%2587%258C%25E4%25BA%2591%25E8%25A7%2586%25E9%25A2%2591%25E7%2582%25B9%25E6%2592%25AD%2F">
+          <i class="fa fa-google-plus"></i><span>分享到 Google&#43;</span>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
+    </div>
+    
+    <div id="about">
+  <div id="about-card">
+    <div id="about-btn-close">
+      <i class="fa fa-remove"></i>
+    </div>
+    
+      <img id="about-card-picture" src="https://www.gravatar.com/avatar/a4bf5f5bec56803e6ed1c59e972e53a5?s=110" alt="作者的图片" />
+    
+    <h4 id="about-card-name">zhonger</h4>
+    
+      <div id="about-card-bio"><strong><em>java AND jp</em></strong></div>
+    
+    
+      <div id="about-card-job">
+        <i class="fa fa-briefcase"></i>
+        <br/>
+        After-end
+      </div>
+    
+    
+      <div id="about-card-location">
+        <i class="fa fa-map-marker"></i>
+        <br/>
+        China
+      </div>
+    
+  </div>
+</div>
+
+    
+
+    
+  
+    
+      <div id="cover" style="background-image:url('https://zhonger.xyz/images/cover.jpg');"></div>
+    
+  
+
+
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.7/js/jquery.fancybox.min.js" integrity="sha256-GEAnjcTqVP+vBp3SSc8bEDQqvWAZMiHyUSIorrWwH50=" crossorigin="anonymous"></script>
+
+
+<script src="https://zhonger.xyz/js/script-pcw6v3xilnxydl1vddzazdverrnn9ctynvnxgwho987mfyqkuylcb1nlt.min.js"></script>
+
+
+<script lang="javascript">
+window.onload = updateMinWidth;
+window.onresize = updateMinWidth;
+document.getElementById("sidebar").addEventListener("transitionend", updateMinWidth);
+function updateMinWidth() {
+  var sidebar = document.getElementById("sidebar");
+  var main = document.getElementById("main");
+  main.style.minWidth = "";
+  var w1 = getComputedStyle(main).getPropertyValue("min-width");
+  var w2 = getComputedStyle(sidebar).getPropertyValue("width");
+  var w3 = getComputedStyle(sidebar).getPropertyValue("left");
+  main.style.minWidth = `calc(${w1} - ${w2} - ${w3})`;
+}
+</script>
+
+<script>
+$(document).ready(function() {
+  hljs.configure({ classPrefix: '', useBR: false });
+  $('pre.code-highlight > code, pre > code').each(function(i, block) {
+    if (!$(this).hasClass('codeblock')) {
+      $(this).addClass('codeblock');
+    }
+    hljs.highlightBlock(block);
+  });
+});
+</script>
+
+
+  
+    
+      <script>
+        var disqus_config = function () {
+          this.page.url = 'https:\/\/zhonger.xyz\/2019\/04\/%E9%98%BF%E9%87%8C%E4%BA%91%E8%A7%86%E9%A2%91%E7%82%B9%E6%92%AD\/';
+          
+            this.page.identifier = '\/2019\/04\/%E9%98%BF%E9%87%8C%E4%BA%91%E8%A7%86%E9%A2%91%E7%82%B9%E6%92%AD\/'
+          
+        };
+        (function() {
+          
+          
+          if (window.location.hostname == "localhost") {
+            return;
+          }
+          var d = document, s = d.createElement('script');
+          var disqus_shortname = 'hugo-tranquilpeak-theme';
+          s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+        })();
+      </script>
+    
+  
+
+
+
+
+    
+  </body>
+</html>
+
